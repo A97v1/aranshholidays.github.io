@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aransh Holidays - Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3" preload="auto"></audio>
+</head>
+<body>
+
+<!-- 🚀 ULTRA Floating Sidebar -->
+<div class="ultra-social-sidebar">
+  <a href="https://instagram.com" target="_blank" class="social neon ig" data-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" class="social neon fb" data-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" class="social neon yt" data-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+
+
+
+  <!-- ✅ PRELOADER GOES HERE — FIRST ELEMENT INSIDE <body> --> 
+<div id="preloader" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+">
+  <img src="loading.gif.gif" alt="Loading..." style="width: 100px;" />
+</div>
+
+<!-- ✅ Now your website content starts below this -->
+
+
+  <header class="navbar">
+  <div class="logo">
+  <img src="https://aranshholidays.com/public/site-img/Aransh-Holidays-09.png" alt="Aransh Holidays Logo" />
+</div>
+
+<div class="navbar-heading">
+  <h1>Aransh-Holidays.</h1>
+</div>
+
+
+<div class="nav-search">
+  <input type="text" placeholder="Search destinations like Bali, Paris..." />
+  <button><i class="fas fa-search"></i></button>
+</div>
+
+  <ul class="nav-menu">
+    <li><a href="#">Family Tours</a></li>
+    <li><a href="#">Corporate Tours</a></li>
+    <li><a href="#">Blogs</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="tel:+918130356307" class="phone">📞 +91-8130-35-6307</a>
+    <i class="fas fa-user"></i>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h1 class="hero-title animate">Aransh Holidays</h1>
+    <p class="hero-subtitle animate">Discover Your Next Adventure<br>with Aransh Holidays</p>
+    <a href="#packages" class="hero-btn animate">Book Now</a>
+  </div>
+</section>
+
+
+
+  <section class="packages">
+  <h2>Top Travel Packages</h2>
+  <div class="package-list">
+    <div class="package animate">
+       <div class="ribbon">Popular</div>
+      <img src="https://images.unsplash.com/photo-1467377791767-c929b5dc9a23?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beach Paradise">
+      <h3>Maldives Escape</h3>
+      <p>5 Nights | Flight + Hotel + Meals</p>
+      <p class="price">₹75,000</p>
+    <div class="stars">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star-half-alt"></i>
+</div>
+      <a href="javascript:void(0);" class="btn open-slider" data-id="maldives">View Gallery</a>
+    </div>
+
+    <div class="package animate">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountain Adventure">
+      <h3>Himalayan Adventure</h3>
+      <p>7 Nights | Trekking + Camp Stay</p>
+      <p class="price">₹55,000</p>
+    <div class="stars">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star-half-alt"></i>
+  <i class="fas "></i>
+</div>
+      <a href="javascript:void(0);" class="btn open-slider" data-id="himalaya">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="destinations">
+  <h2 class="section-title animate">Top Destinations</h2>
+  <p class="section-subtitle animate">Explore the most visited places in India</p>
+<div class="flight-animate-wrapper">
+    <svg viewBox="0 0 1000 300" class="flight-path-svg" xmlns="http://www.w3.org/2000/svg">
+      <!-- Flight Paths -->
+      <path id="path-india-paris" d="M100,250 Q500,50 900,250" fill="none" stroke="#FF6F00" stroke-width="3" stroke-dasharray="10" />
+
+      <path id="path-india-japan" d="M100,250 Q300,0 700,250" fill="none" stroke="#0BC2D6" stroke-width="2" stroke-dasharray="8" />
+
+      <!-- Animated Plane -->
+      <image xlink:href="plane.png" width="40" height="40">
+        <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#path-india-paris" />
+        </animateMotion>
+      </image>
+
+      <!-- Animated Plane 2 -->
+      <image xlink:href="plane.png" width="30" height="30">
+        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#path-india-japan" />
+        </animateMotion>
+      </image>
+
+      <!-- Country Labels -->
+      <text x="100" y="270" fill="#222" font-size="16" font-weight="bold">India</text>
+      <text x="900" y="270" fill="#444" font-size="16" font-weight="bold" text-anchor="end">France</text>
+      <text x="700" y="270" fill="#555" font-size="16" font-weight="bold" text-anchor="middle">Japan</text>
+
+      <!-- Midpoint Labels -->
+      <text x="500" y="60" fill="#888" font-size="14" text-anchor="middle">✈ India → France</text>
+      <text x="400" y="30" fill="#999" font-size="14" text-anchor="middle">✈ India → Japan</text>
+    </svg>
+  </div>
+    <div class="cards">
+      <div class="card animate">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paris" />
+        <h3>Paris</h3>
+        <p>Fall in Love with Paris — The City of Lights Awaits You!</p>
+      </div>
+      <div class="card animate">
+        <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maldives" />
+        <h3>Maldives</h3>
+        <p>Crystal Waters, White Sands — Maldives is Calling!</p>
+      </div>
+      <div class="card animate">
+        <img src="https://plus.unsplash.com/premium_photo-1723058413328-40a64decb9d3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Japan" />
+        <h3>Japan</h3>
+        <p>Discover Japan — Where Tradition Meets Tomorrow!</p>
+      </div>
+      <div class="card animate">
+        <img src="https://images.unsplash.com/photo-1587293907972-69d27b3a9c6f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Himachal Pradesh" />
+        <h3>Himachal Pradesh</h3>
+        <p>Breathe the Mountains — Himachal Awaits Your Soul!</p>
+      </div>
+    </div>
+  </section>
+
+<section class="testimonials" data-aos="fade-up">
+  <h2 data-aos="zoom-in">💬 What Our Travelers Say</h2>
+
+  <div class="swiper review-swiper" data-aos="fade-up" data-aos-delay="200">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <div class="review-card" data-aos="fade-right">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Traveler">
+          <h3>Priya Sharma</h3>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"The trip to Maldives was just magical. Aransh Holidays made it perfect."</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="review-card" data-aos="fade-up">
+          <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Traveler">
+          <h3>Ravi Mehta</h3>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"Their service was top-notch and the team was super supportive. Loved it!"</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="review-card" data-aos="fade-left">
+          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Traveler">
+          <h3>Neha Verma</h3>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>"Absolutely smooth process. Shimla trip was amazing!"</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- Pagination -->
+    <div class="swiper-pagination" data-aos="zoom-in"></div>
+  </div>
+</section>
+
+
+    </div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section class="packing-tool" data-aos="fade-up">
+  <h2>🧳 Plan Smart, Pack Light!</h2>
+  <p class="subtitle">Get a custom packing list in seconds for your next adventure ✈️</p>
+
+  <div class="tool-form glass-box">
+    <div class="form-group">
+      <label><i class="fas fa-globe"></i> Trip Type</label>
+      <select id="trip-type">
+        <option value="beach">🏖 Beach</option>
+        <option value="mountain">⛰ Mountain</option>
+        <option value="business">💼 Business</option>
+        <option value="international">🌍 International</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-clock"></i> Duration</label>
+      <select id="duration">
+        <option value="weekend">Weekend (2–3 Days)</option>
+        <option value="short">Short (4–6 Days)</option>
+        <option value="long">Long (7+ Days)</option>
+      </select>
+    </div>
+
+    <button onclick="generateChecklist()" class="generate-btn">
+      🎒 Generate Checklist
+    </button>
+  </div>
+
+  <div id="checklist-output" class="checklist-output animate__animated animate__fadeInUp"></div>
+</section>
+
+
+
+  <section class="features">
+  <h2>Why Choose WanderX</h2>
+  <div class="feature-cards">
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/ticket.png" alt="Ticket Icon" />
+      <h3>Ultimate flexibility</h3>
+      <p>You're in control, with free cancellation and payment.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/hot-air-balloon.png" alt="Balloon Icon" />
+      <h3>Memorable experience</h3>
+      <p>Browse and book tours and activities so incredible, you'll never forget them.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/diamond.png" alt="Diamond Icon" />
+      <h3>Quality at our core</h3>
+      <p>High quality standards. Millions of reviews.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/prize.png" alt="Award Icon" />
+      <h3>Award Winning</h3>
+      <p>New plan? No problem. We’re here to help, 24/7.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stats-left">
+      <h2>We Make <br><strong>World Travel Easy</strong></h2>
+      <p>
+        Traveling under your own power and at your own pace, you'll connect more meaningfully with your destination and have more fun!
+      </p>
+      <a href="#packages" class="explore-btn">Explore Our Aransh Holidays <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="stats-right">
+      <div class="stat-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>240</h3>
+        <span>Total Destinations</span>
+      </div>
+      <div class="stat-box">
+        <i class="fa-solid fa-user"></i>
+        <h3>3672</h3>
+        <span>Amazing Tours</span>
+      </div>
+      <div class="stat-box">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>92,842</h3>
+        <span>Happy Customer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>WanderX is a leading travel agency helping people explore the world with ease. We offer custom travel experiences to suit every budget and dream.</p>
+  </section>
+
+  <section class="call-form">
+  <div class="form-wrapper">
+    <div class="form-left">
+      <img src="https://img.freepik.com/premium-vector/travel-adventures_767158-538.jpg" alt="Travel World" />
+    </div>
+    <div class="form-right">
+      <h5><span class="orange">WanderX Calling?</span><br><strong>Allow Us to Call You Back!</strong></h5>
+      <form action="thankyou.html" method="POST">
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Name *" required />
+        </div>
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Email Id *" required />
+        </div>
+        <div class="input-group">
+          <i class="fa fa-phone"></i>
+          <input type="tel" placeholder="Phone Number *" required />
+        </div>
+        <div class="input-group">
+          <i class="fa fa-comment"></i>
+          <textarea placeholder="Any Message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Add this in your <head> or before </body> for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<section class="footer-main">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>One of the Ancient Civilisations in the world, India is a miscellany of multicultural experiences. Aransh Holidays being one of the most leading tour and travel agency in India, assists people in witnessing this original beauty.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Explore Himachal & Kashmir</h3>
+      <ul>
+        <li>Manali</li>
+        <li>Solang Valley</li>
+        <li>Tirthan Valley</li>
+        <li>Kasol Kheerganga</li>
+        <li>Shimla</li>
+        <li>Ladakh Trips</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Backpacking Trips</h3>
+      <ul>
+        <li>Spiti Valley</li>
+        <li>Kashmir Backpacking</li>
+      </ul>
+      <h3>Blogs</h3>
+      <ul>
+        <li>Places to Visit in Spring</li>
+        <li>Workcations & Monasteries</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Privacy Policy</li>
+        <li>Cancellation Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Careers</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="footer-contact">
+  <div class="social-icons">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-linkedin-in"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  <div class="footer-offices">
+    <h4>Corporate Office</h4>
+    <p>Goshal Road, Old Manali, Himachal Pradesh</p>
+
+    <h4>Branch Office</h4>
+    <p>A-25, Okhla Industrial Area Phase-1, New Delhi-110020 | +91 11 44121765</p>
+
+    <p>Email: <a href="mailto:info@aranshholidays.com">info@aranshholidays.com</a> | Phone: +91 8130–35–6307 | Website: <a href="#">www.aranshholidays.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© Aransh Holidays, All rights reserved.</p>
+</footer>
+
+
+  <footer>
+    <p>© 2025 WanderX Travels. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918130356307" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    document.body.classList.add("loaded"); // ✨ Triggers content fade-in
+    if (preloader) {
+      preloader.style.transition = "opacity 1.5s ease";
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 1000);
+    }
+  });
+</script>
+
+<script>
+  let lastScrollTop = 0;
+  const sidebar = document.querySelector(".ultra-social-sidebar");
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      sidebar.style.opacity = "0";
+      sidebar.style.pointerEvents = "none";
+    } else {
+      // Scrolling up
+      sidebar.style.opacity = "1";
+      sidebar.style.pointerEvents = "auto";
+    }
+
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+<script>
+  const clickSound = document.getElementById("click-sound");
+  document.querySelectorAll(".social").forEach(btn => {
+    btn.addEventListener("click", () => {
+      clickSound.play();
+    });
+  });
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  new Swiper(".review-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 4000,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+
+<script>
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true      // animation happens only once while scrolling
+  });
+</script>
+
+<script>
+  function generateChecklist() {
+    const type = document.getElementById('trip-type').value;
+    const duration = document.getElementById('duration').value;
+    const output = document.getElementById('checklist-output');
+
+    let commonItems = [
+      "Passport / ID",
+      "Travel Tickets",
+      "Phone & Charger",
+      "Power Bank",
+      "Toothbrush & Paste"
+    ];
+
+    let typeItems = {
+      beach: ["Swimsuit", "Sunscreen", "Beach Slippers", "Sunglasses"],
+      mountain: ["Warm Jacket", "Hiking Shoes", "First Aid Kit", "Backpack"],
+      business: ["Laptop", "Formal Wear", "Business Cards"],
+      international: ["Currency / Forex Card", "Travel Adapter", "Printed Itinerary"]
+    };
+
+    let durationItems = {
+      weekend: ["Light Clothes", "Snacks", "Water Bottle"],
+      short: ["Casual Outfits", "Hat / Cap", "Extra Toiletries"],
+      long: ["Extra Luggage", "Medicines", "Laundry Bag", "Comfort Wear"]
+    };
+
+    const finalItems = [
+      ...commonItems,
+      ...(typeItems[type] || []),
+      ...(durationItems[duration] || [])
+    ];
+
+    output.innerHTML = `
+      <h3>🧾 Your Packing List:</h3>
+      <ul>${finalItems.map(item => `<li>${item}</li>`).join("")}</ul>
+    `;
+  }
+</script>
+
+<script>
+  const galleries = {
+    maldives: [
+      'https://images.unsplash.com/photo-1489252614717-e24ec918e368?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1666285704351-4a69efb3783e?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    ],
+    himalaya: [
+      'https://images.unsplash.com/photo-1519719498756-2f0d81cdf13b?q=80&w=1199&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1599751229070-854ae5c90869?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1615752592661-e49b4b13dfd7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    ]
+  };
+
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.open-slider').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        const wrapper = document.getElementById('slideshow-wrapper');
+        wrapper.innerHTML = '';
+
+        if (galleries[id]) {
+          galleries[id].forEach(src => {
+            wrapper.innerHTML += `
+              <div class="swiper-slide" style="background-image: url('${src}')">
+                <div class="slide-caption">${id.charAt(0).toUpperCase() + id.slice(1)} Experience</div>
+              </div>`;
+          });
+
+          document.getElementById('slideshow-modal').classList.add('active');
+
+          new Swiper('.slideshow-swiper', {
+            slidesPerView: 1,
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            autoplay: { delay: 4000 }
+          });
+        }
+      });
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+      document.getElementById('slideshow-modal').classList.remove('active');
+    });
+  });
+</script>
+
+<!-- 🎬 Cinematic Fullscreen Slideshow -->
+<div id="slideshow-modal" class="slideshow-modal">
+  <div class="slideshow-content">
+    <span class="close-btn">&times;</span>
+    <div class="swiper slideshow-swiper">
+      <div class="swiper-wrapper" id="slideshow-wrapper">
+        <!-- Slides will be injected here -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
