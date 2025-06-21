@@ -13,66 +13,38 @@
 <!-- Header -->
 <header class="navbar">
   <div class="logo">
-    <img src="https://aranshholidays.com/public/site-img/Aransh-Holidays-09.png" alt="Logo"/>
+  <a href="index.html">
+    <img src="https://aranshholidays.com/public/site-img/Aransh-Holidays-09.png" alt="Logo" />
+  </a>
   </div>
   <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="family-tours.html" class="highlight-link">Family Tours</a></li>
-    <li><a href="#">Corporate Tours</a></li>
-    <li><a href="#">Blogs</a></li>
-    <li><a href="#">Login</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="family-tours.html" class="active">Family Tours</a></li>
+    <li><a href="#" class="active">Corporate Tours</a></li>
+    <li><a href="#" class="active">Blogs</a></li>
+    <li><a href="login.html" class="active">Login</a></li>
   </ul>
   <div class="nav-right">
     <a href="tel:+918130356307" class="phone">📞 +91 8130356307</a>
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay">
-    <h1 class="hero-title">Family Tour Packages</h1>
-    <p class="hero-subtitle">Unforgettable Holidays with Your Loved Ones</p>
-    <a href="#packages" class="hero-btn">Explore Now</a>
+<section class="ai-art-section">
+  <div class="ai-art-overlay">
+    <div class="signup-box">
+      <h1>Family-tours</h1>
+      <p>Sign up to our waitlist and get the coolest and newest updates weekly.</p>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 <!-- Family Packages Section -->
 <!-- Family Packages Section -->
 <section class="packages" id="packages">
   <h2>Best Family Packages</h2>
-
-<div class="packages-container">
-  <!-- 🔍 Filter Sidebar -->
-<aside class="filter-sidebar fancy">
-  <h3>🔍 Filter Tours</h3>
-
-  <div class="filter-group">
-    <h4>📦 Categories</h4>
-    <label><input type="checkbox" name="category" checked> All Categories</label>
-    <label><input type="checkbox" name="category"> Domestic Packages</label>
-    <label><input type="checkbox" name="category"> Honeymoon</label>
-  </div>
-
-  <div class="filter-group">
-    <h4>📍 Locations</h4>
-    <label><input type="checkbox" name="location"> Himachal Pradesh</label>
-    <label><input type="checkbox" name="location"> Kerala</label>
-    <label><input type="checkbox" name="location"> Goa</label>
-    <label><input type="checkbox" name="location"> Ladakh</label>
-  </div>
-
-  <div class="filter-group">
-    <h4>💰 Price Range</h4>
-    <div class="price-range">
-      <input type="number" id="minPrice" value="0" placeholder="Min ₹" />
-      <input type="number" id="maxPrice" value="100000" placeholder="Max ₹" />
-    </div>
-    <button onclick="filterPackages()">🎯 Apply Filter</button>
-  </div>
-</aside>
-
-
   <div class="package-list">
     <div class="package">
       <div class="ribbon">Family Favorite</div>
@@ -110,7 +82,19 @@
       </div>
       <a href="#contact" class="btn">Book Now</a>
     </div>
+
+    <div class="package">
+  <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kashmir Tour">
+  <h3>Heavenly Kashmir Escape</h3>
+  <p>5 Nights | Mountain Stay + Shikara Ride</p>
+  <p class="price">₹39,999</p>
+  <div class="stars">
+    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
   </div>
+  <a href="#contact" class="btn">Book Now</a>
+</div>
+ </div>
 </section>
 
 <!-- Testimonials -->
