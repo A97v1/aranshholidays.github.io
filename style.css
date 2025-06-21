@@ -1312,4 +1312,78 @@ align-items: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.package-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filter-box {
+  flex: 1;
+  max-width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.filter-box h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#budgetValue {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.apply-filter {
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-filter:hover {
+  background-color: #e65c00;
+}
+
+.package-list {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
 
