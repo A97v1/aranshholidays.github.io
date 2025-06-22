@@ -586,13 +586,13 @@ footer {
 }
 
 .hero-title {
-  font-size: 64px;
+  font-size: 45px;
   font-weight: 900;
   line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   color: #f1c823;
   margin-top: 15px;
@@ -601,10 +601,10 @@ footer {
 
 .hero-btn {
   margin-top: 30px;
-  padding: 18px 30px;
+  padding: 7px 21px;
   background-color: #ffc107;
   color: #000;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
   border-radius: 13px;
@@ -736,11 +736,11 @@ footer {
 /* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 12px;
+  right: 12px;
   background: #25d366;
   color: white;
-  padding: 14px 16px;
+  padding: 7px 15px;
   border-radius: 50%;
   font-size: 24px;
   z-index: 999;
@@ -812,7 +812,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 10px 8px;
+  padding: 20px 5px;
   z-index: 9999;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
@@ -824,9 +824,9 @@ footer {
 .social {
   position: relative;
   color: white;
-  font-size: 22px;
-  width: 50px;
-  height: 50px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   display: flex;
@@ -1539,5 +1539,75 @@ align-items: center;
   }
 }
 
+.glass-header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  z-index: 999;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  flex-wrap: wrap;
+}
+
+.header-logo img {
+  height: 40px;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+.header-top .right a {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.phone-link {
+  background: #FF6F00;
+  color: white !important;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.header-bottom {
+  background: #f8f8f8;
+  padding: 8px 24px;
+  border-top: 1px solid #eee;
+}
+
+.menu-list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #0a0a5a;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.menu-list li a:hover {
+  color: #FF6F00;
+}
 
 
