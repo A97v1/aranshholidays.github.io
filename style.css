@@ -1387,7 +1387,7 @@ align-items: center;
 .header-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1411,16 +1411,17 @@ align-items: center;
   font-size: 0.95rem;
   padding: 8px 14px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.6);
-  transition: background 0.3s ease;
+  background: transparent; /* ✅ fully transparent */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .header-nav a:hover,
 .header-nav a.active {
-  background: rgba(255, 255, 255, 0.9);
   color: #FF6F00;
-  font-weight: 600;
+  border-bottom: 2px solid #FF6F00;
 }
+
 
 .header-contact a {
   font-size: 0.95rem;
