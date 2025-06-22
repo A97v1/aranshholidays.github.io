@@ -1532,6 +1532,7 @@ align-items: center;
 .menu-header .close-btn {
   font-size: 28px;
   cursor: pointer;
+  color: #222;
 }
 
 .menu-list {

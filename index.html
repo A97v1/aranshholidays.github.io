@@ -13,7 +13,18 @@
 <body>
 
 
-
+<!-- 🚀 ULTRA Floating Sidebar -->
+<div class="ultra-social-sidebar">
+  <a href="https://instagram.com" target="_blank" class="social neon ig" data-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" class="social neon fb" data-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" class="social neon yt" data-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
 
 
   <!-- ✅ PRELOADER GOES HERE — FIRST ELEMENT INSIDE <body> --> 
@@ -33,6 +44,20 @@
 </div>
 
 <!-- ✅ Now your website content starts below this -->
+
+<!-- ✅ Responsive Thin Navbar -->
+<header class="main-navbar">
+  <div class="navbar-container">
+    <a href="#" class="navbar-logo">
+      <img src="images/logo.png" alt="Aransh Holidays" />
+    </a>
+    <div class="navbar-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-bars" onclick="toggleFullMenu()"></i>
+    </div>
+  </div>
+</header>
 
 
  <!-- ✅ Responsive Header -->
@@ -66,8 +91,11 @@
 <div id="mobile-fullmenu" class="mobile-fullmenu">
   <div class="menu-header">
     <h2>Main Menu</h2>
+
+
     <span onclick="toggleFullMenu()" class="close-btn">&times;</span>
   </div>
+
   <ul class="menu-list">
     <li><a href="#">International Packages</a></li>
     <li><a href="#">Explore India</a></li>
@@ -81,24 +109,6 @@
     <p>info@aranshholidays.com</p>
   </div>
 </div>
-
-
-
-<!-- 🚀 ULTRA Floating Sidebar -->
-<div class="ultra-social-sidebar">
-  <a href="https://instagram.com" target="_blank" class="social neon ig" data-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" class="social neon fb" data-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://youtube.com" target="_blank" class="social neon yt" data-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
-</div>
-
-
-
 
 
 <section class="hero">
@@ -638,9 +648,11 @@
  
 <script>
   function toggleFullMenu() {
-    document.getElementById('mobile-fullmenu').classList.toggle('active');
+    const menu = document.getElementById("mobile-fullmenu");
+    menu.classList.toggle("show");
   }
 </script>
+
 
 
 
