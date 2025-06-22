@@ -1455,3 +1455,24 @@ align-items: center;
   }
 }
 
+.logo-box {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-box:hover {
+  transform: scale(1.03);
+}
+
+.logo-box img {
+  height: 60px;
+  object-fit: contain;
+}
+
