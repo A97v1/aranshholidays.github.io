@@ -1387,23 +1387,27 @@ align-items: center;
 .header-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 6px 24px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-logo img {
+/* ✅ Plain Logo (No box or background) */
+.logo img {
   height: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
 }
 
+/* ✅ Navigation Menu */
 .header-nav {
   display: flex;
   gap: 20px;
 }
-
 .header-nav a {
   color: #111;
   text-decoration: none;
@@ -1415,13 +1419,13 @@ align-items: center;
   transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 2px solid transparent;
 }
-
 .header-nav a:hover,
 .header-nav a.active {
   color: #FF6F00;
   border-bottom: 2px solid #FF6F00;
 }
 
+/* ✅ Contact Button */
 .header-contact a {
   font-size: 0.95rem;
   color: #111;
@@ -1434,41 +1438,20 @@ align-items: center;
   gap: 6px;
   transition: background 0.3s ease;
 }
-
 .header-contact a:hover {
   background: rgba(255,255,255,0.9);
   color: #FF6F00;
 }
 
-/* ✅ Logo Box */
-.logo-box {
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  padding: 1px 7px;
-  border-radius: 7px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-.logo-box:hover {
-  transform: scale(1.03);
-}
-.logo-box img {
-  height: 35px;
-  object-fit: contain;
-}
-
-/* ✅ Hamburger (only on mobile) */
+/* ✅ Hamburger Icon for Mobile */
 .mobile-hamburger {
   display: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
   color: #333;
 }
 
-/* ✅ Fullscreen mobile menu */
+/* ✅ Mobile Fullscreen Menu */
 .mobile-fullmenu {
   display: none;
   position: fixed;
@@ -1478,7 +1461,7 @@ align-items: center;
   height: 100vh;
   background: white;
   z-index: 9998;
-  padding: 20px 20px;
+  padding: 20px;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1500,7 +1483,6 @@ align-items: center;
   cursor: pointer;
   color: #222;
 }
-
 .menu-list {
   list-style: none;
   padding: 0;
@@ -1523,34 +1505,7 @@ align-items: center;
   font-weight: bold;
 }
 
-/* ✅ Main thin top navbar */
-.main-navbar {
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
-.navbar-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 16px;
-}
-.navbar-logo img {
-  height: 40px;
-}
-.navbar-icons i {
-  margin-left: 16px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #111;
-}
-
-/* ✅ Responsive Mobile Navbar Fix */
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
   .glass-header {
     height: 55px;
@@ -1565,7 +1520,7 @@ align-items: center;
     height: 100%;
   }
 
-  .logo-box img {
+  .logo img {
     height: 30px;
   }
 
@@ -1583,5 +1538,6 @@ align-items: center;
     display: none !important;
   }
 }
+
 
 
