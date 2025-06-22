@@ -46,25 +46,54 @@
 <!-- ✅ Now your website content starts below this -->
 
 
- <header class="glass-header">
+ <!-- ✅ Responsive Header -->
+<header class="glass-header">
   <div class="header-content">
+    <div class="mobile-hamburger" onclick="toggleFullMenu()">
+  <i class="fas fa-bars"></i>
+</div>
     <div class="logo-box">
       <a href="index.html">
         <img src="https://aranshholidays.com/public/site-img/Aransh-Holidays-09.png" alt="Aransh Holidays Logo" />
       </a>
     </div>
-    <nav class="header-nav">
+
+    <!-- ✅ Navigation Menu -->
+    <nav class="header-nav" id="mobileMenu">
       <a href="index.html" class="active">Home</a>
       <a href="family-tours.html">Family Tours</a>
       <a href="Corporate.html">Corporate</a>
       <a href="Blog.html">Blog</a>
       <a href="login.html">Login</a>
     </nav>
+
     <div class="header-contact">
       <a href="tel:+918130356307"><i class="fas fa-phone"></i> +91 8130 356 307</a>
     </div>
   </div>
 </header>
+
+<!-- ✅ MOBILE FULLSCREEN MENU -->
+<div id="mobile-fullmenu" class="mobile-fullmenu">
+  <div class="menu-header">
+    <h2>Main Menu</h2>
+    <span onclick="toggleFullMenu()" class="close-btn">&times;</span>
+  </div>
+  <ul class="menu-list">
+    <li><a href="#">International Packages</a></li>
+    <li><a href="#">Explore India</a></li>
+    <li><a href="#">Family Tour India</a></li>
+    <li><a href="#">Weekend Trips</a></li>
+    <li><a href="#">Honeymoon Packages</a></li>
+    <li><a href="#">Group Tours</a></li>
+  </ul>
+  <div class="menu-footer">
+    <p><i class="fas fa-headset"></i> Speak to Our Expert At<br><span class="phone">+91 98186 61004</span></p>
+    <p>info@aranshholidays.com</p>
+  </div>
+</div>
+
+
 
 
 
@@ -602,6 +631,13 @@
     </div>
   </div>
 </div>
+ 
+<script>
+  function toggleFullMenu() {
+    document.getElementById('mobile-fullmenu').classList.toggle('active');
+  }
+</script>
+
 
 
 </body>
