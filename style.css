@@ -1667,5 +1667,10 @@ align-items: center;
   transform: scale(1.03);
 }
 
+@media (max-width: 768px) {
+  .header-bottom {
+    display: none;
+  }
+}
 
 
