@@ -1541,9 +1541,13 @@ align-items: center;
 
 .glass-header {
   position: fixed;
+  top: 0;
   width: 100%;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   z-index: 999;
   font-family: 'Poppins', sans-serif;
 }
@@ -1563,7 +1567,7 @@ align-items: center;
 .search-bar {
   padding: 8px 12px;
   border-radius: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #cccccc;
   width: 200px;
 }
 
@@ -1580,12 +1584,6 @@ align-items: center;
   color: white !important;
   padding: 6px 12px;
   border-radius: 5px;
-}
-
-.header-bottom {
-  background: #f8f8f8;
-  padding: 8px 24px;
-  border-top: 1px solid #eee;
 }
 
 .menu-list {
@@ -1609,5 +1607,67 @@ align-items: center;
 .menu-list li a:hover {
   color: #FF6F00;
 }
+
+.header-bottom {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;  /* ❌ Removed solid color */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: none;
+  border-bottom: none;
+  padding: 12px 30px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 21px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: 900;
+  color: #000;
+  font-size: 16px;
+  padding: 6px 12px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar li a:hover {
+  color: #ff6600;
+  border-bottom: 2px solid #ff6600;
+}
+
+.logo-glass {
+  background: #ffffff; /* ❌ This is solid white */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+   padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.logo-glass img {
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-glass:hover {
+  transform: scale(1.03);
+}
+
+
 
 
