@@ -464,7 +464,6 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 15px 30px;
-  background-color: #ffeecc;
   color: #333;
 }
 
@@ -1667,7 +1666,6 @@ align-items: center;
 .logo-glass:hover {
   transform: scale(1.03);
 }
-
 
 
 
