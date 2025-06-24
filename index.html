@@ -14,10 +14,10 @@
 
 <!-- 🚀 ULTRA Floating Sidebar -->
 <div class="ultra-social-sidebar">
-  <a href="https://instagram.com" target="_blank" class="social neon ig" data-label="Instagram">
+  <a href="https://www.instagram.com/aransh_holidays?igsh=cDk5NDlhOGptemw2" target="_blank" class="social neon ig" data-label="Instagram">
     <i class="fab fa-instagram"></i>
   </a>
-  <a href="https://facebook.com" target="_blank" class="social neon fb" data-label="Facebook">
+  <a href="https://www.facebook.com/share/16cNymb5MP/" target="_blank" class="social neon fb" data-label="Facebook">
     <i class="fab fa-facebook-f"></i>
   </a>
   <a href="https://youtube.com" target="_blank" class="social neon yt" data-label="YouTube">
@@ -75,7 +75,7 @@
 
   <div class="header-bottom" style="background: transparent !important;">
     <ul class="navbar">
-      <li><a href="#">Foreign Tours</a></li>
+      <li><a href="foreign.html" class="active">Foreign Tours</a></li>
       <li><a href="#">Explore India</a></li>
       <li><a href="#">Weekend Trips</a></li>
       <li><a href="#">Honeymoon Trips</a></li>
@@ -96,12 +96,12 @@
   </div>
 
   <ul class="menu-list">
-    <li><a href="#">Foreign Tours</a></li>
-    <li><a href="#">Explore India</a></li>
-    <li><a href="#">Family Tour India</a></li>
-    <li><a href="#">Weekend Trips</a></li>
-    <li><a href="#">Honeymoon Packages</a></li>
-    <li><a href="#">Group Tours</a></li>
+    <li><a href="foreign.html" class="active">International Packages</a></li>
+    <li><a href="explore.html">Explore India</a></li>
+    <li><a href="family-tours.html">Family Tour India</a></li>
+    <li><a href="weekend.html">Weekend Trips</a></li>
+    <li><a href="honeymoon.html">Honeymoon Packages</a></li>
+    <li><a href="group.html">Group Tours</a></li>
   </ul>
 
   <div class="menu-footer">
@@ -648,9 +648,11 @@
 
 <script>
   function toggleFullMenu() {
-    document.getElementById('mobile-fullmenu').classList.toggle('active');
+    const menu = document.getElementById("mobile-fullmenu");
+    menu.classList.toggle("active");
   }
 </script>
+
 
 
 </body>
