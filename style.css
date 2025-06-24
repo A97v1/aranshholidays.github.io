@@ -1635,19 +1635,43 @@ align-items: center;
 }
 
 .navbar li a {
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   color: #000;
   font-size: 16px;
   padding: 6px 12px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease;
+  border-bottom: none !important; /* Remove default underline */
 }
 
-.navbar li a:hover {
-  color: #ff6600;
+/* 👇 Common curved line on hover & active */
+.navbar li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  width: 0%;
+  height: 5px;
   border-bottom: 2px solid #ff6600;
+  border-radius: 0 0 100px 100px;
+  transition: width 0.3s ease;
 }
+
+/* 👇 When hovered or active, show the curve */
+.navbar li a:hover,
+.navbar li a.active {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.navbar li a:hover::after,
+.navbar li a.active::after {
+  width: 80%;
+}
+
+
 
 .logo-glass {
   background: #ffffff; /* ❌ This is solid white */
@@ -1686,4 +1710,3 @@ align-items: center;
 .menu-list a.active:hover {
   color: #f5a623;
 }
-
