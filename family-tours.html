@@ -21,7 +21,7 @@
     <nav class="header-nav">
       <a href="index.html">Home</a>
       <a href="family-tours.html" class="active">Family Tours</a>
-      <a href="Corporate.html">Corporate Tour</a>
+      <a href="Corporate.html">Corporate Tours</a>
       <a href="Blog.html">Blog</a>
       <a href="login.html">Login</a>
     </nav>
@@ -29,7 +29,43 @@
       <a href="tel:+918130356307"><i class="fas fa-phone"></i> +91 8130 356 307</a>
     </div>
   </div>
+
+  <div class="header-bottom" style="background: transparent !important;">
+    <ul class="navbar">
+      <li><a href="foreign.html">Foreign Tours</a></li>
+      <li><a href="#">Explore India</a></li>
+      <li><a href="#">Weekend Trips</a></li>
+      <li><a href="#">Honeymoon Trips</a></li>
+      <li><a href="#">Group Tours</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
 </header>
+
+<!-- ✅ MOBILE FULLSCREEN MENU -->
+<div id="mobile-fullmenu" class="mobile-fullmenu">
+  <div class="menu-header">
+    <h2>Main Menu</h2>
+
+
+    <span onclick="toggleFullMenu()" class="close-btn">&times;</span>
+  </div>
+
+  <ul class="menu-list">
+    <li><a href="foreign.html" class="active">International Packages</a></li>
+    <li><a href="explore.html">Explore India</a></li>
+    <li><a href="family-tours.html">Family Tour India</a></li>
+    <li><a href="weekend.html">Weekend Trips</a></li>
+    <li><a href="honeymoon.html">Honeymoon Packages</a></li>
+    <li><a href="group.html">Group Tours</a></li>
+  </ul>
+
+  <div class="menu-footer">
+    <p><i class="fas fa-headset"></i> Speak to Our Expert At<br><span class="phone">+91 98186 61004</span></p>
+    <p>info@aranshholidays.com</p>
+  </div>
+</div>
 
 
 <section class="ai-art-section">
@@ -184,7 +220,12 @@ function filterPackages() {
 }
 </script>
 
-
+<script>
+  function toggleFullMenu() {
+    const menu = document.getElementById("mobile-fullmenu");
+    menu.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
