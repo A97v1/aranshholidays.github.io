@@ -1684,3 +1684,11 @@ align-items: center;
 .menu-list a.active:hover {
   color: #f5a623;
 }
+
+/* Add this in your CSS file */
+@media screen and (max-width: 768px) {
+  .ultra-social-sidebar {
+    display: none;
+  }
+}
+
