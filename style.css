@@ -552,7 +552,7 @@ footer {
 
 .hero {
   position: relative;
-  height: 120vh;
+  height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
   background-size: cover;
   background-position: center;
@@ -573,7 +573,7 @@ footer {
 }
 
 .hero-title {
-  font-size: 45px;
+  font-size: 47px;
   font-weight: 900;
   line-height: 1.2;
 }
