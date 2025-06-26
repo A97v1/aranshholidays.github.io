@@ -1777,4 +1777,43 @@ align-items: center;
   }
 }
 
+.social-feed {
+  text-align: center;
+  padding: 90px 70px;
+  background: #fff;
+}
+
+.social-feed h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.social-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-card {
+  background: #fff;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  max-width: 450px;
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-5px);
+}
+
+.logo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
 
