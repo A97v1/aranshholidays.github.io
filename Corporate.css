@@ -558,7 +558,7 @@ footer {
 
 .hero {
   position: relative;
-  height: 120vh;
+  height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
   background-size: cover;
   background-position: center;
@@ -1411,8 +1411,8 @@ align-items: center;
 .header-nav a {
   color: #111;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.85rem;
   padding: 8px 14px;
   border-radius: 10px;
   background: transparent;
@@ -1622,7 +1622,7 @@ align-items: center;
   -webkit-backdrop-filter: blur(12px);
   box-shadow: none;
   border-bottom: none;
-  padding: 12px 30px;
+  padding: 9px 30px;
 }
 
 .navbar {
@@ -1640,7 +1640,7 @@ align-items: center;
   text-decoration: none;
   font-weight: 500;
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
   padding: 6px 12px;
   transition: color 0.3s ease;
   border-bottom: none !important; /* Remove default underline */

@@ -552,7 +552,7 @@ footer {
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 120vh;
   background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
   background-size: cover;
   background-position: center;
@@ -1375,7 +1375,7 @@ align-items: center;
 .header-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 1px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1661,7 +1661,7 @@ align-items: center;
 }
 
 .logo-glass img {
-  height: 60px;
+  height: 50px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
