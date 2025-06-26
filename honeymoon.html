@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Family Tours | Aransh Holidays</title>
+  <title>Honeymoon Trips | Aransh Holidays</title>
   <link rel="stylesheet" href="honeymoon.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -13,12 +13,15 @@
 <!-- Header -->
 <header class="glass-header">
   <div class="header-content">
+    <div class="mobile-hamburger" onclick="toggleFullMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
     <div class="logo">
       <a href="index.html">
         <img src="https://aranshholidays.com/public/site-img/Aransh-Holidays-09.png" alt="Aransh Holidays Logo" />
       </a>
     </div>
-    <nav class="header-nav">
+    <nav class="header-nav" id="mobileMenu">
       <a href="index.html">Home</a>
       <a href="family-tours.html">Family Tours</a>
       <a href="Corporate.html">Corporate Tours</a>
@@ -53,12 +56,13 @@
   </div>
 
   <ul class="menu-list">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="foreign.html">Foreign Tours</a></li>
+    <li><a href="Corporate.html">Corporate Tours</a></li>
     <li><a href="explore.html">Explore India</a></li>
     <li><a href="family-tours.html">Family Tours</a></li>
     <li><a href="weekend.html">Weekend Trips</a></li>
-    <li><a href="honeymoon.html" class="active">Honeymoon Trips</a></li>
+    <li><a href="honeymoon.html">Honeymoon Trips</a></li>
     <li><a href="group.html">Group Tours</a></li>
     <li><a href="group.html">FAQ</a></li>
     <li><a href="contact.html">Contact</a></li>
