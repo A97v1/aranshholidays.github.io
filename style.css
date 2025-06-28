@@ -794,12 +794,12 @@ footer {
 /* Slide-in and Glow Glass Sidebar */
 .ultra-social-sidebar {
   position: fixed;
-  top: 35%;
+  top: 39%;
   left: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 20px 5px;
+  gap: 10px;
+  padding: 10px 3px;
   z-index: 9999;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
@@ -811,9 +811,9 @@ footer {
 .social {
   position: relative;
   color: white;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   display: flex;
@@ -1779,41 +1779,93 @@ align-items: center;
 
 .social-feed {
   text-align: center;
-  padding: 90px 70px;
-  background: #fff;
+  padding: 80px 40px;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .social-feed h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 50px;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+
+.social-feed h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #0077ff;
+  border-radius: 2px;
 }
 
 .social-logos {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .logo-card {
-  background: #fff;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  border-radius: 12px;
-  max-width: 450px;
-  transition: transform 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  z-index: 0;
+}
+
+.logo-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(0, 119, 255, 0.15), transparent 70%);
+  transform: rotate(25deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.logo-image {
+  position: relative;
+  z-index: 2; /* Makes sure the image sits above the gradient */
 }
 
 .logo-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.025);
+  box-shadow: 0 18px 50px rgba(0, 119, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .logo-card img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
+
+.logo-card:hover img {
+  transform: scale(1.015);
+}
+
+
+
+
 
