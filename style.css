@@ -1835,7 +1835,6 @@ align-items: center;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(120deg, rgba(0, 119, 255, 0.15), transparent 70%);
   transform: rotate(25deg);
   pointer-events: none;
   z-index: 0;
@@ -1864,7 +1863,6 @@ align-items: center;
 .logo-card:hover img {
   transform: scale(1.015);
 }
-
 
 
 
