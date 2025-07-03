@@ -1865,4 +1865,32 @@ align-items: center;
 }
 
 
+/* Full Banner Styling */
+/* Full Banner Section */
+.kerala-full-banner {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #fff; /* Optional background */
+}
+
+/* Boxed container for the image */
+.kerala-banner-box {
+  max-width: 1290px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* Optional shadow */
+}
+
+/* Banner Image */
+.kerala-banner-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+
+
 
