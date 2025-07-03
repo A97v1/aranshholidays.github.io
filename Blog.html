@@ -3,50 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corporate Tours | Aransh Holidays</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="Corporate.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <title>FAQ Page</title>
+  <link rel="stylesheet" href="Blog.css" />
 </head>
 <body>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1 class="hero-title">Faq</h1>
+    </div>
+  </section>
 
-<!-- Navbar (Fixed Outside Section) -->
-<nav class="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-4 backdrop-blur-md bg-white/10 text-white z-50">
-  <div class="text-2xl font-bold">
-    <a href="index.html">
-      <img src="https://aranshholidays.com/public/site-img/Aransh-Holidays-09.png" alt="Aransh Holidays Logo" class="h-14"/>
-    </a>
-  </div>
+  <!-- FAQ Section -->
+<section class="faq-section">
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
 
-  <ul class="flex space-x-8 text-sm font-medium">
-    <li><a href="index.html" class="hover:underline">Home</a></li>
-    <li><a href="family-tours.html" class="hover:underline">Family Tours</a></li>
-    <li><a href="Corporate.html" class="hover:underline text-yellow-300">Corporate Tours</a></li>
-    <li><a href="blogs.html" class="hover:underline">Blogs</a></li>
-    <li><a href="login.html" class="hover:underline">Login</a></li>
-  </ul>
-</nav>
+    <div class="faq-item">
+      <div class="faq-question">Can I get the refund?</div>
+      <div class="faq-icon">+</div>
+      <div class="faq-answer">Phang Nga Bay Sea Cave Canoeing & James Bond Island w/ Buffet Lunch by Big Boat cancellation policy: For a full refund, cancel at least 24 hours in advance of the start date of the experience. Discover and book Phang Nga Bay Sea Cave Canoeing & James Bond Island w/ Buffet Lunch by Big Boat.</div>
+    </div>
 
-<!-- Hero Section -->
-<section class="relative h-screen bg-cover bg-center pt-24" style="background-image: url('https://plus.unsplash.com/premium_photo-1676218968741-8179dd7e533f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="faq-item">
+      <div class="faq-question">Can I change the travel date?</div>
+      <div class="faq-icon">+</div>
+      <div class="faq-answer">Yes, you can change it up to 7 days before departure. Additional charges may apply.</div>
+    </div>
 
-  <div class="relative z-10 flex flex-col justify-center h-full px-12 max-w-3xl text-white">
-    <p class="text-lg mb-2">AI-Powered Smart Writing Set</p>
-    <h1 class="text-5xl font-bold leading-tight mb-4">Where Pen Meets AI</h1>
-    <p class="text-base mb-6">Write notes on paper, access them anywhere,<br> thanks to powerful AI.</p>
-    <div class="flex items-center space-x-4">
-      <a href="#" class="bg-white text-black font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-200 transition-all">Buy Now</a>
-      <div class="bg-white bg-opacity-10 border border-white border-opacity-20 rounded-full px-5 py-2 text-sm backdrop-blur">
-        <span class="text-white">Seamless blend of traditional writing and cutting-edge AI technology</span>
-      </div>
+    <div class="faq-item">
+      <div class="faq-question">When and where does the tour end?</div>
+      <div class="faq-icon">+</div>
+      <div class="faq-answer">The tour ends at the final destination in your itinerary. You’ll receive exact details before departure.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you arrange airport transfers?</div>
+      <div class="faq-icon">+</div>
+      <div class="faq-answer">Yes, we offer airport transfers as part of most travel packages or as an add-on option.</div>
     </div>
   </div>
 </section>
+
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      faqItems.forEach(i => {
+        if (i !== item) i.classList.remove('open');
+      });
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
 
 </body>
 </html>
