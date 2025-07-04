@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Wanderly | Modern Travel Blog</title>
+  <link rel="stylesheet" href="blog-1.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <h2>Wanderly</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">Travel Tips</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+      <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+    </div>
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open/Close Sidebar">&#9776;</button>
+  </aside>
+  <main>
+    <header>
+      <div class="filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="adventure">Adventure</button>
+        <button class="filter" data-category="beach">Beach</button>
+        <button class="filter" data-category="city">City</button>
+        <button class="filter" data-category="mountain">Mountain</button>
+      </div>
+    </header>
+    <div class="main-content">
+      <section class="posts-grid" id="postsGrid"></section>
+      <aside class="main-sidebar">
+        <div class="top-posts">
+          <h3>Top Posts</h3>
+          <ul id="topPosts"></ul>
+        </div>
+        <div class="instagram-gallery">
+          <h3>Instagram</h3>
+          <div class="insta-grid" id="instaGallery">
+            <!-- Insta images JS -->
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <!-- Overlay for blog details page -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>
