@@ -548,11 +548,9 @@ footer {
 
 /* === Hero Redesign === */
 
-/* === Hero Redesign (Updated) === */
-
 .hero {
   position: relative;
-  height: 100vh;;
+  height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
   background-size: cover;
   background-position: center;
@@ -562,8 +560,6 @@ footer {
   justify-content: center;
   text-align: center;
 }
-
-
 
 .hero-content {
   position: relative;
@@ -596,10 +592,43 @@ footer {
   background: #cc7a00;
 }
 
-
+/* ✅ Extra: fallback heading font size if outside hero-content */
 .hero h2 {
   font-size: 40px;
 }
+
+/* 📱 Responsive: Adjust for mobile screens */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-content .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* 📱 Even smaller screens (phones) */
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-content .btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
 
 
 
