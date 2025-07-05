@@ -63,6 +63,7 @@ h1 {
 
 .hero-content p {
   font-size: 20px;
+  color: rgb(209, 149, 39);
   margin-bottom: 25px;
 }
 
@@ -547,59 +548,59 @@ footer {
 
 /* === Hero Redesign === */
 
+/* === Hero Redesign (Updated) === */
+
 .hero {
   position: relative;
-  height: 120vh;
+  height: 100vh;;
   background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
   background-size: cover;
   background-position: center;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
 }
 
 
 
-.hero-overlay {
+.hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 30px;
+  padding: 20px;
 }
 
-.hero-title {
-  font-size: 45px;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
-.hero-subtitle {
-  font-size: 20px;
-  font-weight: 500;
-  color: #f1c823;
-  margin-top: 15px;
-  line-height: 1.4;
-}
-
-.hero-btn {
-  margin-top: 30px;
-  padding: 7px 21px;
-  background-color: #ffc107;
-  color: #000000;
-  font-size: 18px;
+.hero-content h2 {
+  font-size: 48px;
   font-weight: bold;
-  border: none;
-  border-radius: 13px;
-  text-decoration: none;
-  transition: background 0.6s ease;
-  line-height: 5.6;
+  margin-bottom: 15px;
 }
 
-.hero-btn:hover {
-  background-color: #e0a800;
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
+
+.hero-content .btn {
+  background: #ff9900;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #cc7a00;
+}
+
+
+.hero h2 {
+  font-size: 40px;
+}
+
 
 
 /* === Hero Section Animations === */
