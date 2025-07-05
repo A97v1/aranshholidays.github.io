@@ -2004,4 +2004,268 @@ align-items: center;
 
 
 
+.headline-slider h1 {
+  font-size: 40px;
+  font-weight: 1000;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #ffcb22; /* ⬅️ Adjust as needed */
+}
 
+.slider-words {
+  display: inline-block;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative;
+}
+
+.slider-words span {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  animation: slideWords 6s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes slideWords {
+  0%, 20% {
+    transform: translateY(0%);
+  }
+  25%, 45% {
+    transform: translateY(-100%);
+  }
+  50%, 70% {
+    transform: translateY(-200%);
+  }
+  75%, 100% {
+    transform: translateY(0%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Container for tabs + search bar */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 520px;
+  margin-top: 10px; /* Move search bar slightly lower for professional spacing */
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  z-index: 2;
+  position: relative;
+}
+
+.tab {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  margin-right: 6px; /* Gap between "Trip Packages" and "Travel Guides" */
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background-color: #1d3fa4; /* default = blue */
+  color: white;
+  transition: 0.3s;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Inactive tab becomes blue */
+.tab:not(.active) {
+  background-color: #1d3fa4;
+  color: white;
+}
+
+/* Active tab becomes white */
+.tab.active {
+  background-color: white;
+  color: #1d3fa4;
+  z-index: 3;
+  border-bottom: none;
+}
+
+/* Round only outer corners */
+.left-tab {
+  border-right: 1px solid #ddd;
+}
+
+.right-tab {
+  border-left: 1px solid #ddd;
+  margin-left: -1px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 14px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  top: -1px;
+  width: 100%;
+  z-index: 1;
+  border-top: 1px solid #1d3fa4;
+  transition: border-radius 0.3s ease;
+}
+
+/* Icons */
+.icon-left, .icon-right {
+  font-size: 20px;
+  color: #000;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.icon-left {
+  margin-right: 14px;
+}
+
+.icon-right {
+  margin-left: 14px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  flex: 1;
+  background: transparent;
+}
+
+/* Connected to LEFT tab (Trip Packages) */
+.search-box.left-connected {
+  border-top-left-radius: 0;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* Connected to RIGHT tab (Travel Guides) */
+.search-box.right-connected {
+  border-top-left-radius: 0;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+
+
+
+
+
+
+.signup-container {
+  width: 600px;
+  height: 400px;
+  background: #ffffff10;
+  display: flex;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.form-section {
+  flex: 1;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: white;
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+.form-section button {
+  background-color: #8ae08a;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  color: #1b3d2f;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #7bd07b;
+}
+
+.image-section {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1587502537745-84aa58c5f97b') center/cover;
+  position: relative;
+}
+
+.branding {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.branding-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #8ae08a;
+  margin-right: 10px;
+}

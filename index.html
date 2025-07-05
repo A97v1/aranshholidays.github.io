@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Flaticon Bold Straight Icons CSS -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
   <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3" preload="auto"></audio>
 </head>
 <body>
@@ -119,14 +121,34 @@
 <section class="hero">
   <div class="hero-content">
     <h2>वसुधैव कुटुम्बकम्</h2>
-    <p>Discover Your Next Adventure with Aransh Holidays</p>
 
-    <div class="search-bar">
-      <span class="location-icon">📍</span>
-      <input type="text" placeholder="Pick Best Suitable Packages, Destinations & More For You">
-      <button class="search-button">🔍</button>
-    </div>
+<div class="headline-slider">
+  <h1>Book - <span class="slider-words">
+    <span>Backpacking Trips</span>
+    <span>Weekend Getaways</span>
+    <span>International Tours</span>
+  </span></h1>
+</div>
+
+<div class="search-container">
+  <div class="tabs">
+    <button class="tab left-tab active" onclick="switchTab(this)">Travel Packages</button>
+    <button class="tab right-tab" onclick="switchTab(this)">Trip Planner</button>
   </div>
+
+  <div class="search-box left-connected"> <!-- We add "left-connected" class -->
+    <span class="icon-left">
+      <i class="fi fi-bs-marker"></i>
+    </span>
+
+    <input type="text" id="searchInput" placeholder="Pick the perfect Package for your Dream Destination" />
+
+    <span class="icon-right">
+      <i class="fi fi-bs-search"></i>
+    </span>
+  </div>
+</div>
+
 </section>
 
 
@@ -987,34 +1009,32 @@
     <p>Aransh-Holidays is a leading travel agency helping people explore the world with ease. We offer custom travel experiences to suit every budget and dream.</p>
   </section>
 
-  <section class="call-form">
-  <div class="form-wrapper">
-    <div class="form-left">
-      <img src="pngyo.png" alt="Travel World" />
+   <div class="signup-container">
+    <div class="form-section">
+      <h2>Sign up</h2>
+      <div class="form-group">
+        <input type="text" placeholder="First & last name" value="Stephen Johnson" />
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="E-mail" value="stephen.johnson@email.com" />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" />
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="newsletter" />
+        <label for="newsletter">I would like to receive a weekly newsletter.</label>
+      </div>
+      <button>SIGN ME UP</button>
     </div>
-    <div class="form-right">
-      <h5><span class="orange">Aransh Holidays Calling?</span><br><strong>Allow Us to Call You Back!</strong></h5>
-      <form action="thankyou.html" method="POST">
-        <div class="input-group">
-          <i class="fa fa-user"></i>
-          <input type="text" placeholder="Name *" required />
-        </div>
-        <div class="input-group">
-          <i class="fa fa-envelope"></i>
-          <input type="email" placeholder="Email Id *" required />
-        </div>
-        <div class="input-group">
-          <i class="fa fa-phone"></i>
-          <input type="tel" placeholder="Phone Number *" required />
-        </div>
-        <div class="input-group">
-          <i class="fa fa-comment"></i>
-          <textarea placeholder="Any Message"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+    <div class="image-section">
+      <div class="branding">
+        <div class="branding-icon"></div>
+        <span>THE OLD MOUNTAIN RESORT</span>
+      </div>
     </div>
   </div>
+</body>
 </section>
 
 
@@ -1288,6 +1308,28 @@
     menu.classList.toggle("active");
   }
 </script>
+
+<script>
+  function switchTab(button) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    button.classList.add('active');
+
+    const input = document.getElementById("searchInput");
+    const box = document.querySelector(".search-box");
+
+    if (button.textContent === "Trip Packages") {
+      input.placeholder = "Pick Best Suitable Packages, Destinations & More For You";
+      box.classList.remove("right-connected");
+      box.classList.add("left-connected");
+    } else {
+      input.placeholder = "Explore Guides, Tips, Blogs & Local Secrets";
+      box.classList.remove("left-connected");
+      box.classList.add("right-connected");
+    }
+  }
+</script>
+
 
 
 
