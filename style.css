@@ -564,7 +564,7 @@ footer {
   align-items: center;      /* ✅ Centers items horizontally */
   justify-content: center;
   text-align: center;       /* ✅ Centers text */
-  padding: 90px;
+  padding: 160px;
 }
 
 
