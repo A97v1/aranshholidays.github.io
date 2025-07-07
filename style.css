@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #ffeecc;
+  background-color: white;
   color: #333;
 }
 
@@ -2009,22 +2009,28 @@ align-items: center;
   font-weight: 1000;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  color: #ffcb22; /* ⬅️ Adjust as needed */
+  color: #ffcb22;
 }
 
 .slider-words {
   display: inline-block;
-  height: 40px;
+  height: 60px;
   overflow: hidden;
   vertical-align: middle;
   position: relative;
 }
 
+/* Stack all words vertically */
 .slider-words span {
+  display: block;
+  animation: slideWords 6s ease-in-out infinite;
+}
+
+/* Make each word the same height */
+.slider-words span > span {
   display: block;
   height: 40px;
   line-height: 40px;
-  animation: slideWords 6s ease-in-out infinite;
 }
 
 /* Animation */
@@ -2046,8 +2052,35 @@ align-items: center;
 
 
 
+@media (max-width: 768px) {
+  .headline-slider h1 {
+    font-size: 24px; /* Smaller font for mobile */
+  }
 
+  .slider-words {
+    height: 28px; /* Match new line-height */
+  }
 
+  .slider-words span {
+    height: 28px;
+    line-height: 28px;
+  }
+
+  @keyframes slideWords {
+    0%, 20% {
+      transform: translateY(0%);
+    }
+    25%, 45% {
+      transform: translateY(-100%);
+    }
+    50%, 70% {
+      transform: translateY(-200%);
+    }
+    75%, 100% {
+      transform: translateY(0%);
+    }
+  }
+}
 
 
 
@@ -2174,98 +2207,208 @@ align-items: center;
 
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.signup-container {
-  width: 600px;
-  height: 400px;
-  background: #ffffff10;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
   display: flex;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  max-width: 1000px; /* you can reduce this to 950 or 900 */
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
-.form-section {
+.left-section, .right-section {
   flex: 1;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.form-section h2 {
-  font-size: 28px;
-  margin-bottom: 25px;
+.left-section {
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.left-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"] {
+.form-group input {
   width: 100%;
-  padding: 10px;
-  background: transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.forgot-password {
+  font-size: 0.75rem;
+  text-align: right;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
   border: none;
-  border-bottom: 1px solid #ccc;
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.form-group input::placeholder {
-  color: #bbb;
-  font-size: 14px;
+.register-text {
+  font-size: 0.85rem;
 }
 
-.checkbox-group {
+.register-text a {
+  color: #00a859;
+  text-decoration: none;
+}
+
+.right-section {
+  flex: 1;
+  background-color: white; /* light green background */
   display: flex;
   align-items: center;
-  margin: 15px 0;
-}
-
-.checkbox-group input {
-  margin-right: 10px;
-}
-
-.form-section button {
-  background-color: #8ae08a;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  font-size: 16px;
-  color: #1b3d2f;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.form-section button:hover {
-  background-color: #7bd07b;
-}
-
-.image-section {
-  flex: 1;
-  background: url('https://images.unsplash.com/photo-1587502537745-84aa58c5f97b') center/cover;
+  justify-content: center;
+  padding: 2rem;
   position: relative;
 }
 
-.branding {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  display: flex;
-  align-items: center;
+.illustration-box {
+  background-color: #e7f6ee;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.branding-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #8ae08a;
-  margin-right: 10px;
+.illustration-box img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
 }
+
+.illustration-box .caption {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 12px;
+  }
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .left-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 0.85rem;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .login-btn {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .illustration-box {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .illustration-box .caption {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+

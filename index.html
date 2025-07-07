@@ -130,6 +130,10 @@
   </span></h1>
 </div>
 
+
+
+
+
 <div class="search-container">
   <div class="tabs">
     <button class="tab left-tab active" onclick="switchTab(this)">Travel Packages</button>
@@ -230,19 +234,23 @@
 
       <path id="path-india-japan" d="M100,250 Q300,0 700,250" fill="none" stroke="#0BC2D6" stroke-width="2" stroke-dasharray="8" />
 
-      <!-- Animated Plane -->
-      <image xlink:href="plane.png" width="40" height="40">
-        <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-          <mpath href="#path-india-paris" />
-        </animateMotion>
-      </image>
+<!-- Animated Plane -->
+<g transform="translate(0, -40)">
+  <image xlink:href="plane_5532461.png" width="40" height="40">
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-start-reverse">
+      <mpath href="#path-india-paris" />
+    </animateMotion>
+  </image>
+</g>
 
-      <!-- Animated Plane 2 -->
-      <image xlink:href="plane.png" width="30" height="30">
-        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
-          <mpath href="#path-india-japan" />
-        </animateMotion>
-      </image>
+<!-- Animated Plane 2 -->
+<g transform="translate(0, -40)">
+  <image xlink:href="plane_5532461.png" width="30" height="30">
+    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto-start-reverse">
+      <mpath href="#path-india-japan" />
+    </animateMotion>
+  </image>
+</g>
 
       <!-- Country Labels -->
       <text x="100" y="270" fill="#222" font-size="16" font-weight="bold">India</text>
@@ -990,6 +998,7 @@
   </div>
 </section>
 
+
 <section class="social-feed">
   <h2>SOCIAL FEED</h2>
   <div class="social-logos">
@@ -1002,39 +1011,47 @@
   </div>
 </section>
 
+<section class="about">
+  <h2>About Us</h2>
+  <p>Aransh-Holidays is a leading travel agency helping people explore the world with ease. We offer custom travel experiences to suit every budget and dream.</p>
+</section>
 
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>Aransh-Holidays is a leading travel agency helping people explore the world with ease. We offer custom travel experiences to suit every budget and dream.</p>
-  </section>
-
-   <div class="signup-container">
-    <div class="form-section">
-      <h2>Sign up</h2>
-      <div class="form-group">
-        <input type="text" placeholder="First & last name" value="Stephen Johnson" />
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="E-mail" value="stephen.johnson@email.com" />
-      </div>
-      <div class="form-group">
-        <input type="password" placeholder="Password" />
-      </div>
-      <div class="checkbox-group">
-        <input type="checkbox" id="newsletter" />
-        <label for="newsletter">I would like to receive a weekly newsletter.</label>
-      </div>
-      <button>SIGN ME UP</button>
+<section> 
+    <div class="container">
+    <div class="left-section">
+      <h1>Sign Up</h1>
+      <p class="subtext">
+        Simplify your workflow and boost your productivity with <strong>Tuga’s App</strong>. Get started for free.
+      </p>
+      <form class="login-form">
+        <div class="form-group">
+          <input type="text" placeholder="Username" required />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" required />
+        </div>
+        <p class="forgot-password">Forgot Password?</p>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="divider">or continue with</div>
+        <div class="social-icons">
+          <button class="social-btn">G</button>
+          <button class="social-btn">f</button>
+          <button class="social-btn"></button>
+        </div>
+        <p class="register-text">
+          Not a member? <a href="#">Register now</a>
+        </p>
+      </form>
     </div>
-    <div class="image-section">
-      <div class="branding">
-        <div class="branding-icon"></div>
-        <span>THE OLD MOUNTAIN RESORT</span>
-      </div>
-    </div>
+<div class="right-section">
+  <div class="illustration-box">
+    <img src="illustration.png" alt="Illustration" />
+    <p class="caption">
+      Make your work easier and organized with <strong>Tuga’s App</strong>
+    </p>
   </div>
-</body>
+</div>
 </section>
 
 
