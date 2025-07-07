@@ -460,6 +460,19 @@ input[type="number"]:focus {
   transform: scale(1.1) translateY(-3px);
 }
 
+/* 📱 Mobile Friendly Adjustment */
+@media (max-width: 600px) {
+  #backToTop {
+    bottom: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+
+
 
 
 
