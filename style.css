@@ -1518,7 +1518,7 @@ align-items: center;
 }
 .menu-footer .phone {
   color: #f5a623;
-  font-weight: bold;
+  font-weight: 400px;
 }
 
 /* ✅ Responsive Design */
@@ -1608,11 +1608,11 @@ align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 11px;
+  gap: 3px;
 }
 
 .menu-list li a {
-  font-size: 18px;
+  font-size: 16px;
   color: #0a0a5a;
   text-decoration: none;
   font-weight: 800;
