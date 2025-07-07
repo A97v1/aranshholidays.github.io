@@ -2,63 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Wanderly | Modern Travel Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="blog-1.css">
 </head>
 <body>
-  <aside class="sidebar" id="sidebar">
-    <div class="brand">
-      <h2>Wanderly</h2>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Guides</a></li>
-        <li><a href="#">Travel Tips</a></li>
-        <li><a href="#">Gallery</a></li>
-      </ul>
-    </nav>
-    <div class="sidebar-footer">
-      <a href="#" class="social-icon" aria-label="Instagram">IG</a>
-      <a href="#" class="social-icon" aria-label="Twitter">TW</a>
-    </div>
-    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open/Close Sidebar">&#9776;</button>
-  </aside>
-  <main>
-    <header>
-      <div class="filters">
-        <button class="filter active" data-category="all">All</button>
-        <button class="filter" data-category="adventure">Adventure</button>
-        <button class="filter" data-category="beach">Beach</button>
-        <button class="filter" data-category="city">City</button>
-        <button class="filter" data-category="mountain">Mountain</button>
-      </div>
-    </header>
-    <div class="main-content">
-      <section class="posts-grid" id="postsGrid"></section>
-      <aside class="main-sidebar">
-        <div class="top-posts">
-          <h3>Top Posts</h3>
-          <ul id="topPosts"></ul>
-        </div>
-        <div class="instagram-gallery">
-          <h3>Instagram</h3>
-          <div class="insta-grid" id="instaGallery">
-            <!-- Insta images JS -->
-          </div>
-        </div>
-      </aside>
-    </div>
-    <div class="pagination" id="pagination"></div>
-  </main>
 
-  <!-- Overlay for blog details page -->
-  <div id="modalOverlay" class="modal-overlay">
-    <div class="modal-content" id="modalContent"></div>
+<!-- Top Wave -->
+<div class="top-wave">
+  <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 100 C 150 200, 350 0, 800 100 L800 0 L0 0 Z" fill="#fef9f4"/>
+    <path d="M0 120 C 200 220, 600 50, 800 120 L800 0 L0 0 Z" fill="#fff3e0" opacity="0.4"/>
+  </svg>
+</div>
+
+
+  <div class="right-section">
+    <div class="header-bar">
+      <div class="header-icons">
+
+      </div>
+    </div>
+
+<!-- Featured Image Section -->
+<div class="featured-image-container">
+  <img src="https://images.unsplash.com/photo-1566323124620-d22adb71d2a2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Trip Banner Image" class="featured-image">
+  <div class="image-overlay-text">
+    <h1>10 Mind-Blowing Facts About Ladakh That Prove It’s More Than Just a Dream Destination</h1>
+  </div>
+</div>
+
+
+<div class="trip-details-card-1">
+  <h1 class="heading-group">
+  <span class="emoji-slide">🚀</span>
+  <span class="text-slide">Discover the Magic of Ladakh</span>
+</h1>
+
+  <p class="description">
+   Ladakh isn’t just a destination—it’s an emotion. Located in the northernmost region of India, this magical land is full of surprises that most travelers never expect. Whether you're an adventure junkie, a nature lover, or a spiritual seeker, Ladakh has something for everyone. Here are 10 incredible facts that will blow your mind and make Ladakh shoot to the top of your travel bucket list. 🧭✨
+  </p>
+</div>
+
+
+<div class="trip-details-card-1" id="fact1">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🏔️</span>
+  <span class="text-slide">1. Home to the World's Highest Motorable Road: Umling La Pass (19,024 ft)</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1539717905912-7a7106c6fadd?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
   </div>
 
-<script src="main.js"></script>
+  <p class="description">
+    If you're the kind who gets excited about epic roads and extreme altitudes, Umling La Pass is your dream come true. Situated at a jaw-dropping 19,024 feet, it has dethroned the famed Khardung La to become the highest motorable road on Earth.
+
+Imagine cruising through this icy desert, with oxygen levels nearly half of what you're used to. The thin air tests your stamina, but the views make every breath worth it—rugged peaks, glacial winds, and absolute silence.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact2">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🏜️</span>
+  <span class="text-slide">2. Ladakh Is a Cold Desert—No Rain, Just Snow!</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1610716942672-ac90487defe1?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    Unlike Rajasthan’s hot deserts, Ladakh is a cold desert. It lies in the rain shadow of the Himalayas, which blocks the southwest monsoon from reaching the region. This results in minimal rainfall, barren terrains, and surreal, Mars-like topography.
+
+You’ll witness ice-blue rivers flowing through golden canyons, and snow sitting peacefully on dry brown mountains.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact3">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🌊</span>
+  <span class="text-slide">3. Pangong Lake Changes Color Throughout the Day</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1619103801164-1166263cb3b6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+   Pangong Tso, stretching from India to China, is not just a lake—it's a color-changing masterpiece. Its waters transition from turquoise to deep blue to grey depending on the sky’s mood and time of day.
+
+Set at an altitude of about 14,270 ft, it’s become a tourist magnet thanks to its appearance in films like 3 Idiots—but no camera can truly capture its beauty.
+  </p>
+</div>
+
+
+<div class="trip-details-card-1" id="fact4">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🌌</span>
+  <span class="text-slide">4. It’s One of the Best Stargazing Spots on Earth</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1637314995782-32ce6edf7b08?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    With zero light pollution and a sky so clear it feels painted, Ladakh is a stargazer’s paradise. The dry climate, high altitude, and clean air create perfect conditions to spot constellations, planets, and even the elusive Milky Way with the naked eye.
+
+Whether you're in Hanle, Nubra Valley, or Tso Moriri, just lie back and look up—you'll feel the universe staring back at you.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact5"> 
+    <h1 class="heading-group">
+  <span class="emoji-slide">🔭</span>
+  <span class="text-slide">5. World's Highest Astronomical Observatory Is in Hanle</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1686041132522-805774ad9c98?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    At 14,764 ft above sea level, the Indian Astronomical Observatory in Hanle is among the highest on Earth. Surrounded by nothing but mountains and sky, it’s the perfect place to study stars without interference from human-made lights or pollution.
+
+This remote outpost plays a critical role in India's space research and attracts international scientists.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact6">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🐫</span>
+  <span class="text-slide">6. It Has One of the Rarest Twin-Humped Camels in the World</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1593118960299-4818285df788?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    Forget Rajasthan's single-humped camels. Ladakh’s Nubra Valley is home to the Bactrian camel, a two-humped, woolly beast that looks like it time-traveled from the ancient Silk Route days.
+
+These camels are adapted to freezing temperatures and high altitudes. Riding one through the Hunder sand dunes—with snow-capped peaks in the backdrop—is a surreal experience.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact7">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🛶</span>
+  <span class="text-slide">7. The World's Highest River Rafting Happens on the Zanskar River</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1743019226804-9079c7428a31?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    Think rafting is only for tropical rivers? Think again. Ladakh lets you raft through glaciers and canyons at an altitude of over 11,000 feet.
+
+The Zanskar River cuts through the Himalayas with its icy blue currents, offering Grade III and IV rapids surrounded by breathtaking gorges.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact8">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🧘</span>
+  <span class="text-slide">8. Ladakh Is Home to Over 100 Peaceful Monasteries</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1607972577835-41175e08e400?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+   Ladakh is deeply intertwined with Tibetan Buddhism. Its ancient monasteries, many perched on cliffs or nestled in valleys, offer glimpses into centuries-old rituals, art, and architecture.
+
+From the colorful Hemis Festival to quiet morning prayers at Thiksey Monastery, Ladakh offers spiritual peace like no other.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact9">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🌍</span>
+  <span class="text-slide">9.  Turtuk: See the Indo-Pak Border and a Unique Culture</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1566323124508-c708b5524d61?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    Turtuk, one of the last villages on the Indian side of the Line of Control, only opened to tourists in 2010. Located in the Baltistan region, it’s culturally different from the rest of Ladakh.
+
+With stone houses, lush apricot orchards, and warm locals, it offers a peaceful, heartwarming contrast to Ladakh's rugged landscapes.
+  </p>
+</div>
+
+<div class="trip-details-card-1" id="fact10">
+    <h1 class="heading-group">
+  <span class="emoji-slide">🐚</span>
+  <span class="text-slide">10. Ladakh Was Once Under the Sea—Fossils Prove It!</span>
+</h1>
+  
+  <div class="day-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1654476728641-4f09c0715295?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delhi to Nainital">
+  </div>
+
+  <p class="description">
+    It’s hard to believe, but millions of years ago, Ladakh lay beneath the Tethys Sea. Over time, tectonic shifts gave birth to the Himalayas—and fossils of marine life remain embedded in Ladakh’s rock formations even today.
+
+From snail shells to limestone layers, the region is a geologist's dream and a real-time textbook on plate tectonics.
+  </p>
+</div>
+
+<!-- Fancy Small Back to Top Button -->
+<button id="backToTop" title="Go to top">⮝</button>
+
+
+<!-- Bottom Wave -->
+<div class="bottom-wave">
+  <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 100 C 150 0, 650 200, 800 100 L800 200 L0 200 Z" fill="#f59e0b"/>
+    <path d="M0 120 C 200 20, 600 250, 800 120 L800 200 L0 200 Z" fill="#fff3e0" opacity="0.4"/>
+  </svg>
+</div>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</script>
+
+<!-- Trip Highlights Sidebar -->
+<aside class="trip-sidebar">
+  <div class="sidebar-box">
+    <h3>📌 Trip Highlights</h3>
+<ul>
+  <li><a href="#fact1">🏔️ Umling La Pass</a></li>
+  <li><a href="#fact2">🏜️ Cold Desert</a></li>
+  <li><a href="#fact3">🌊 Pangong Lake</a></li>
+  <li><a href="#fact4">🧘 Monasteries</a></li>
+  <li><a href="#fact5">🐫 Bactrian Camels</a></li>
+  <li><a href="#fact6">🔭 Stargazing in Hanle</a></li>
+  <li><a href="#fact7">🥶 Magnetic Hill Mystery</a></li>
+  <li><a href="#fact8">🎨 Unique Culture & Festivals</a></li>
+  <li><a href="#fact9">🚣 Zanskar River Rafting</a></li>
+  <li><a href="#fact10">🗿 Moonland in Lamayuru</a></li>
+</ul>
+
+  </div>
+</aside>
+
+
 </body>
 </html>

@@ -1871,3 +1871,206 @@ align-items: center;
   font-weight: bold;
 }
 
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px; /* you can reduce this to 950 or 900 */
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.left-section, .right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-section {
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.left-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.forgot-password {
+  font-size: 0.75rem;
+  text-align: right;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.register-text {
+  font-size: 0.85rem;
+}
+
+.register-text a {
+  color: #00a859;
+  text-decoration: none;
+}
+
+.right-section {
+  flex: 1;
+  background-color: white; /* light green background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.illustration-box {
+  background-color: #e7f6ee;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.illustration-box img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.illustration-box .caption {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 12px;
+  }
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .left-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 0.85rem;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .login-btn {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .illustration-box {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .illustration-box .caption {
+    font-size: 0.9rem;
+  }
+}
