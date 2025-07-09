@@ -9,7 +9,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #362a2a;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 
 .container {
@@ -2528,9 +2528,110 @@ body {
 }
 
 
+.perfect-escape {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.escape-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
 
+.escape-heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
 
+/* Wrapper */
+.escape-slider-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden; /* ✅ important for transform sliding */
+}
+
+/* Slider track for JS transform */
+.escape-slider {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease; /* ✅ smooth transition */
+  will-change: transform;
+}
+
+/* Individual Card */
+.escape-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.escape-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.escape-card h3 {
+  margin: 12px 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.escape-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Arrows */
+.escape-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1a57c3;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+.escape-arrow:hover {
+  background-color: #0f419d;
+}
+
+.escape-arrow.left {
+  left: 10px;
+}
+
+.escape-arrow.right {
+  right: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .escape-card {
+    width: 240px;
+  }
+  .escape-arrow.left {
+    left: 5px;
+  }
+  .escape-arrow.right {
+    right: 5px;
+  }
+}
 
 
 
