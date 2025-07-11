@@ -2637,14 +2637,17 @@ body {
 
 
 /* Card Grid Layout */
+/* Card Grid Layout */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1320px; /* 220px x 6 = 1320px for 6 cards */
   margin: 0 auto;
   justify-items: center;
+  padding: 20px;
 }
+
 
 
 
@@ -2667,6 +2670,8 @@ body {
   display: block;
 }
 
+
+
 .card-section {
   padding: 30px 0px;
 }
@@ -2679,32 +2684,20 @@ body {
   color: #333;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .card-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 12px;
-    gap: 16px;
-
-    /* ✅ Hides scrollbars */
-    scrollbar-width: none;           /* Firefox */
-  }
-
-  /* ✅ Hides scrollbars - WebKit browsers (Chrome, Safari) */
-  .card-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .card {
-    min-width: 160px;
-    max-width: 180px;
-    aspect-ratio: 3 / 4;
-    scroll-snap-align: start;
-    border-radius: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    max-width: 900px;
   }
 }
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
 
 
 .package-heading {
@@ -2723,32 +2716,52 @@ body {
   padding: 20px;
 }
 
+/* Each card (image-box) takes 25% minus gap = 4 per row */
 .image-box {
-  display: block;
-  width: 270px;
-  height: 350px;
+  flex: 0 1 calc(25% - 30px);
+  width: calc(15% - 20px); /* extra safety */
+  height: 300px;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.1),
-    0 8px 20px rgba(0, 0, 0, 0.05); /* Subtle layered shadow */
+    0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect stays the same */
 .image-box:hover {
   transform: translateY(-12px);
   box-shadow:
     0 6px 12px rgba(0, 0, 0, 0.15),
     0 16px 32px rgba(0, 0, 0, 0.1),
-    0 0 15px rgba(255, 165, 0, 0.3); /* Orange glow */
+    0 0 15px rgba(255, 165, 0, 0.3);
 }
 
-
+/* Image stays full */
 .image-box img {
   width: 100%;
-  height: 100%;
+  height: 120%;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 720px) {
+  .package {
+    flex: 0 1 calc(33.33% - 30px); /* 3 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .package {
+    flex: 0 1 calc(50% - 30px); /* 2 per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .package {
+    flex: 0 1 100%; /* 1 per row */
+  }
 }
 
