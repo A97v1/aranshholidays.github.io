@@ -2637,12 +2637,14 @@ body {
 /* Card Grid Layout */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
 }
+
+
 
 .card {
   display: block;
@@ -2663,7 +2665,17 @@ body {
   display: block;
 }
 
+.card-section {
+  padding: 30px 0px;
+}
 
+.card-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: #333;
+}
 
 @media (max-width: 600px) {
   .card-container {
@@ -2693,6 +2705,13 @@ body {
 }
 
 
+.package-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+}
 
 .package-list {
   display: flex;
@@ -2704,8 +2723,8 @@ body {
 
 .image-box {
   display: block;
-  width: 300px;
-  height: 400px;
+  width: 270px;
+  height: 350px;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
