@@ -136,6 +136,7 @@
 
 
 
+<!-- Search Bar -->
 <div class="search-container">
   <div class="tabs">
     <button class="tab left-tab active" onclick="switchTab(this)">Travel Packages</button>
@@ -156,6 +157,7 @@
 </div>
 
 </section>
+
 
 
 
@@ -229,6 +231,14 @@
 
       <a href="https://your-link.com/spiti" class="card" target="_blank">
     <img src="10.png" alt="Spiti">
+  </a>
+
+      <a href="https://your-link.com/spiti" class="card" target="_blank">
+    <img src="11.png" alt="Spiti">
+  </a>
+
+      <a href="https://your-link.com/spiti" class="card" target="_blank">
+    <img src="12.png" alt="Spiti">
   </a>
 
     <a href="https://your-link.com/spiti" class="card" target="_blank">
@@ -360,7 +370,7 @@
       <a href="explore-package-21.html" class="btn">View Details</a>
     </div>
 
-    <div class="package animate">
+    <div class="package animate" data-title="Explore Ladakh via Manali">
       <img src="https://images.unsplash.com/photo-1719645003037-17494ac2519d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jaipur Tour">
       <h3>Explore Ladakh <br> via Manali</h3>
       <p>11 Days 10 Nights | Ladakh</p>
@@ -1448,6 +1458,26 @@
 
     document.getElementById("escapeNext").addEventListener("click", slideNext);
     document.getElementById("escapePrev").addEventListener("click", slidePrev);
+  });
+</script>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const packages = document.querySelectorAll(".package");
+
+  searchInput.addEventListener("input", () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    packages.forEach(pkg => {
+      const title = pkg.getAttribute("data-title").toLowerCase();
+      if (searchText === "") {
+        pkg.style.display = "block"; // Show all if search is empty
+      } else if (title.includes(searchText)) {
+        pkg.style.display = "block"; // Show matching
+      } else {
+        pkg.style.display = "none";  // Hide others
+      }
+    });
   });
 </script>
 
