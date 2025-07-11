@@ -944,46 +944,107 @@ footer {
   text-align: center;
 }
 
+/* Testimonials Section */
 .testimonials {
-  background: #f9f9f9;
-  padding: 60px 20px;
+  background: #fefcf8;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .testimonials h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #333;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-size: 42px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
+.testimonials h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff914d;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
 
 .review-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   max-width: 350px;
   margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
 }
 
 .review-card img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  border: 3px solid #ff914d;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 5px rgba(255, 145, 77, 0.1);
 }
 
 .review-card h3 {
-  margin: 0;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.review-card .role {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
 }
 
 .review-card p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
-  margin: 5px 0;
+  line-height: 1.6;
 }
+
+/* Optional star rating styling */
+.review-card .stars {
+  color: #fbb034;
+  font-size: 16px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+
+/* Swiper pagination */
+.swiper-pagination {
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff914d;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+
 
 .packing-tool {
   padding: 60px 20px;
@@ -2548,30 +2609,30 @@ body {
   margin-bottom: 40px;
 }
 
+/* Wrapper must control full view space */
 /* Wrapper */
 .escape-slider-wrapper {
   position: relative;
-  max-width: 1000px;
+  max-width: 1240px;
   margin: auto;
   overflow: hidden; /* ✅ important for transform sliding */
 }
 
-/* Slider track for JS transform */
+/* Scrollable area */
 .escape-slider {
   display: flex;
-  gap: 24px;
-  transition: transform 0.5s ease; /* ✅ smooth transition */
-  will-change: transform;
+  gap: 20px;
+  transition: transform 1.0s ease;
 }
 
-/* Individual Card */
+/* Cards – fixed width ensures alignment */
 .escape-card {
-  flex: 0 0 auto;
-  width: 300px;
+  flex: 0 0 240px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 
 .escape-card img {
   width: 100%;
@@ -2600,14 +2661,13 @@ body {
   background: #1a57c3;
   color: white;
   border: none;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   font-size: 20px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .escape-arrow:hover {
@@ -2716,10 +2776,9 @@ body {
   padding: 20px;
 }
 
-/* Each card (image-box) takes 25% minus gap = 4 per row */
+/* 5 cards per row */
 .image-box {
-  flex: 0 1 calc(25% - 30px);
-  width: calc(15% - 20px); /* extra safety */
+  flex: 0 1 calc(20% - 24px); /* 100% / 5 = 20%, subtracting gap */
   height: 300px;
   border-radius: 20px;
   overflow: hidden;
@@ -2747,20 +2806,21 @@ body {
   display: block;
 }
 
-@media (max-width: 720px) {
-  .package {
-    flex: 0 1 calc(33.33% - 30px); /* 3 per row */
+/* ✅ Media Queries for mobile responsiveness */
+@media (max-width: 992px) {
+  .image-box {
+    flex: 0 1 calc(33.33% - 20px); /* 3 per row */
   }
 }
 
 @media (max-width: 768px) {
-  .package {
-    flex: 0 1 calc(50% - 30px); /* 2 per row */
+  .image-box {
+    flex: 0 1 calc(50% - 20px); /* 2 per row */
   }
 }
 
 @media (max-width: 480px) {
-  .package {
+  .image-box {
     flex: 0 1 100%; /* 1 per row */
   }
 }
