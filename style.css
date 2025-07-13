@@ -258,24 +258,20 @@ footer.footer-bottom {
 
 /* 📱 Mobile Responsive Design */
 @media (max-width: 768px) {
-  .footer-main {
-    background-position: center top;
-    background-attachment: scroll;
-    padding: 40px 15px;
-  }
-
   .footer-container {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start; /* align to left */
+    text-align: left;         /* text aligned left */
     gap: 30px;
+    padding: 20px;
   }
 
   .footer-column {
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
+
 
 .footer-column {
   flex: 1 1 250px;
