@@ -259,40 +259,41 @@
   <h2 class="section-title animate">Top Destinations</h2>
   <p class="section-subtitle animate">Explore the most visited places in India</p>
 <div class="flight-animate-wrapper">
-    <svg viewBox="0 0 1000 300" class="flight-path-svg" xmlns="http://www.w3.org/2000/svg">
-      <!-- Flight Paths -->
-      <path id="path-india-paris" d="M100,250 Q500,50 900,250" fill="none" stroke="#FF6F00" stroke-width="3" stroke-dasharray="10" />
+  <svg viewBox="0 0 1200 300" class="flight-path-svg" xmlns="http://www.w3.org/2000/svg">
+    <!-- Flight Paths -->
+    <path id="path-india-paris" d="M100,250 Q600,30 1100,250" fill="none" stroke="#FF6F00" stroke-width="3" stroke-dasharray="10" />
 
-      <path id="path-india-japan" d="M100,250 Q300,0 700,250" fill="none" stroke="#0BC2D6" stroke-width="2" stroke-dasharray="8" />
+    <path id="path-india-japan" d="M100,250 Q400,-10 900,250" fill="none" stroke="#0BC2D6" stroke-width="2" stroke-dasharray="8" />
 
-<!-- Animated Plane -->
-<g transform="translate(0, -40)">
-  <image xlink:href="plane_5532461.png" width="40" height="40">
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-start-reverse">
-      <mpath href="#path-india-paris" />
-    </animateMotion>
-  </image>
-</g>
+    <!-- Animated Plane -->
+    <g transform="translate(0, -40)">
+      <image xlink:href="plane_5532461.png" width="40" height="40">
+        <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-start-reverse">
+          <mpath href="#path-india-paris" />
+        </animateMotion>
+      </image>
+    </g>
 
-<!-- Animated Plane 2 -->
-<g transform="translate(0, -40)">
-  <image xlink:href="plane_5532461.png" width="30" height="30">
-    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto-start-reverse">
-      <mpath href="#path-india-japan" />
-    </animateMotion>
-  </image>
-</g>
+    <!-- Animated Plane 2 -->
+    <g transform="translate(0, -40)">
+      <image xlink:href="plane_5532461.png" width="30" height="30">
+        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto-start-reverse">
+          <mpath href="#path-india-japan" />
+        </animateMotion>
+      </image>
+    </g>
 
-      <!-- Country Labels -->
-      <text x="100" y="270" fill="#222" font-size="16" font-weight="bold">India</text>
-      <text x="900" y="270" fill="#444" font-size="16" font-weight="bold" text-anchor="end">France</text>
-      <text x="700" y="270" fill="#555" font-size="16" font-weight="bold" text-anchor="middle">Japan</text>
+    <!-- Country Labels -->
+    <text x="100" y="270" fill="#222" font-size="16" font-weight="bold">India</text>
+    <text x="1100" y="270" fill="#444" font-size="16" font-weight="bold" text-anchor="end">France</text>
+    <text x="900" y="270" fill="#555" font-size="16" font-weight="bold" text-anchor="middle">Japan</text>
 
-      <!-- Midpoint Labels -->
-      <text x="500" y="60" fill="#888" font-size="14" text-anchor="middle">✈ India → France</text>
-      <text x="400" y="30" fill="#999" font-size="14" text-anchor="middle">✈ India → Japan</text>
-    </svg>
-  </div>
+    <!-- Midpoint Labels -->
+    <text x="600" y="40" fill="#888" font-size="14" text-anchor="middle">✈ India → France</text>
+    <text x="500" y="20" fill="#999" font-size="14" text-anchor="middle">✈ India → Japan</text>
+  </svg>
+</div>
+
     <div class="escape-slider-wrapper">
       <button class="escape-arrow left" id="escapePrev">&#10094;</button>
 
@@ -667,7 +668,7 @@
     <div class="package animate">
        <div class="ribbon">Popular</div>
       <img src="https://images.unsplash.com/photo-1601821139990-9fc929db79ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sikkim Tour">
-      <h3>Nainital Jim Corbett – Uttarakhand Tour</h3>
+      <h3>Nainital Jim Corbett - Uttarakhand Tour</h3>
       <p>5 Days 4 Nights | Uttarakhand </p>
       <p class="price">₹15,000</p>
     <div class="stars">
@@ -1066,7 +1067,7 @@
   <div class="callback-container">
     <div class="callback-form">
       <h2>Plan Your <span>Family Tour</span></h2>
-      <form>
+      <form action="contact.php" method="POST">
         <div class="input-group">
           <i class="fi fi-sr-user icon"></i>
           <input type="text" placeholder="Name" required />

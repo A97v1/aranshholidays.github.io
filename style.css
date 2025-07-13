@@ -922,18 +922,6 @@ footer {
   animation: bounceGlow 1.2s ease-out;
 }
 
-.flight-animate-wrapper {
-  width: 100%;
-  max-width: 800px;
-  margin: 30px auto;
-  position: relative;
-}
-
-.flight-path-svg {
-  width: 100%;
-  height: 220px;
-}
-
 .stars {
   color: #ffc107;
   margin: 8px 0;
@@ -1270,6 +1258,21 @@ align-items: center;
     }
 
 .flight-animate-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 2rem 1rem;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.flight-path-svg {
+  width: 100%;
+  min-width: 1200px;
+  height: auto;
+}
+    
+.flight-animate-wrapper {
   padding: 2rem 0;
   overflow-x: auto;
   text-align: center;
@@ -1281,6 +1284,39 @@ align-items: center;
   height: auto;
 }
 
+/* ✅ Mobile: shrink and remove scroll */
+@media (max-width: 768px) {
+  .flight-animate-wrapper {
+    padding: 0.5rem;
+    overflow: hidden;            /* ✅ hides scrollbar */
+  }
+
+  .flight-path-svg {
+    transform: scale(0.4);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 480px) {
+  .flight-path-svg {
+    transform: scale(0.3);
+  }
+}
+
+
+  .flight-path-svg text {
+    font-size: 10px; /* smaller text */
+  }
+
+  .flight-path-svg image {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .flight-path-svg path {
+    stroke-width: 1.5; /* thinner path */
+    stroke-dasharray: 6; /* smaller dash */
+  }
 
 .navbar-heading h1 {
   font-size: 1.8rem;
