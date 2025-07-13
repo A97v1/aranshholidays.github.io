@@ -113,21 +113,26 @@ h1 {
 
 .package-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);  /* Force 4 columns */
   gap: 25px;
   padding: 40px 20px;
-  max-width: 1200px;
+  max-width: 1300px;                     /* Wide enough to fit 4 cards */
   margin: 0 auto;
+  justify-items: center;                /* Center each card */
 }
+
+
 
 .package {
   background: #f9f9f9;
   border-radius: 30px;
-  width: 300px;
+  width: 100%;              /* Fill the grid column */
+  max-width: 280px;         /* Prevent overflow */
   padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 🔄 Smooth animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .package:hover {
   transform: translateY(-10px); /* ⬆️ Slight move up */
