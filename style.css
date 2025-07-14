@@ -2208,7 +2208,7 @@ align-items: center;
 
 .slider-words {
   display: inline-block;
-  height: 60px;
+  height: 69px;
   overflow: hidden;
   vertical-align: middle;
   position: relative;
@@ -2916,22 +2916,31 @@ body {
   display: block;
 }
 
-/* ✅ Media Queries for mobile responsiveness */
+/* Desktop: 3 per row */
 @media (max-width: 992px) {
   .image-box {
-    flex: 0 1 calc(33.33% - 20px); /* 3 per row */
+    flex: 0 1 calc(33.33% - 20px);
   }
 }
 
+/* Tablet: 2 per row */
 @media (max-width: 768px) {
   .image-box {
-    flex: 0 1 calc(50% - 20px); /* 2 per row */
+    flex: 0 1 calc(50% - 20px);
   }
 }
 
+/* Mobile: 1 per row, full width */
 @media (max-width: 480px) {
   .image-box {
-    flex: 0 1 100%; /* 1 per row */
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* ensure full image is shown */
   }
 }
-/* ✅ Footer Styles */
