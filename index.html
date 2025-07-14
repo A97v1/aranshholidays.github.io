@@ -295,7 +295,7 @@
 </div>
 
     <div class="escape-slider-wrapper">
-      <button class="escape-arrow left" id="escapePrev">&#10094;</button>
+     
 
       <div class="escape-slider" id="escapeSlider">
         <div class="escape-card">
@@ -335,7 +335,7 @@
         </div>
       </div>
 
-      <button class="escape-arrow right" id="escapeNext">&#10095;</button>
+    
     </div>
   </div>
 </section>
@@ -1338,55 +1338,41 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const track = document.getElementById("escapeSlider");
-    const cards = track.children;
-    const cardWidth = cards[0].offsetWidth + 24; // 24px assumed gap
-    let position = 0;
 
-    // Clone first N cards and append for looping
+    let speed = 0.5; // adjust to make it slower/faster
+    let currentX = 0;
+
+    // Clone cards for seamless loop
     const cloneCount = 5;
+    const cards = [...track.children];
     for (let i = 0; i < cloneCount; i++) {
       const clone = cards[i].cloneNode(true);
       track.appendChild(clone);
     }
 
-    const totalCards = track.children.length;
+    function animateSlider() {
+      currentX -= speed;
+      track.style.transform = `translateX(${currentX}px)`;
 
-    const slideNext = () => {
-      position++;
-      track.style.transition = 'transform 0.5s ease-in-out';
-      track.style.transform = `translateX(-${position * cardWidth}px)`;
-
-      // Reset if end of original slides
-      if (position >= totalCards - cloneCount) {
-        setTimeout(() => {
-          track.style.transition = 'none';
-          position = 0;
-          track.style.transform = `translateX(0px)`;
-        }, 500);
+      // Reset when scrolled past half (original + clones)
+      if (Math.abs(currentX) >= track.scrollWidth / 2) {
+        currentX = 0;
       }
-    };
 
-    const slidePrev = () => {
-      if (position === 0) {
-        position = totalCards - cloneCount;
-        track.style.transition = 'none';
-        track.style.transform = `translateX(-${position * cardWidth}px)`;
-        setTimeout(() => {
-          track.style.transition = 'transform 0.5s ease-in-out';
-          position--;
-          track.style.transform = `translateX(-${position * cardWidth}px)`;
-        }, 20);
-      } else {
-        position--;
-        track.style.transition = 'transform 0.5s ease-in-out';
-        track.style.transform = `translateX(-${position * cardWidth}px)`;
-      }
-    };
+      requestAnimationFrame(animateSlider);
+    }
 
-    document.getElementById("escapeNext").addEventListener("click", slideNext);
-    document.getElementById("escapePrev").addEventListener("click", slidePrev);
+    // Set up styles
+    track.style.display = "flex";
+    track.style.willChange = "transform";
+    track.style.transition = "none";
+
+    // Start animation
+    requestAnimationFrame(animateSlider);
   });
 </script>
+
+
 
 <script>
   const searchInput = document.getElementById("searchInput");

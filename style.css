@@ -2784,34 +2784,7 @@ body {
   margin-bottom: 12px;
 }
 
-/* Arrows */
-.escape-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #1a57c3;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 
-.escape-arrow:hover {
-  background-color: #0f419d;
-}
-
-.escape-arrow.left {
-  left: 10px;
-}
-
-.escape-arrow.right {
-  right: 10px;
-}
 
 /* Mobile */
 @media (max-width: 768px) {
