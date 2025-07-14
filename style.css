@@ -1328,65 +1328,108 @@ align-items: center;
     }
 
 .flight-animate-wrapper {
+  position: relative;
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 2rem 1rem;
-  overflow-x: auto;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .flight-path-svg {
   width: 100%;
-  min-width: 1200px;
-  height: auto;
-}
-    
-.flight-animate-wrapper {
-  padding: 2rem 0;
-  overflow-x: auto;
-  text-align: center;
-}
-
-.flight-path-svg {
-  width: 100%;
-  max-width: 1000px;
   height: auto;
 }
 
-/* ✅ Mobile: shrink and remove scroll */
+/* Airport image styling */
+.airport-img {
+  position: absolute;
+  width: 214px;   /* increased from 80px */
+  height: auto;
+  z-index: 2;
+}
+
+/* India airport */
+.airport-india {
+  top: 260px;     /* slightly adjusted for larger size */
+  left: 70px;
+}
+
+/* Japan airport */
+.airport-japan {
+  top: 260px;
+  left: 790px;
+}
+
+/* France airport */
+.airport-france {
+  top: 260px;
+  left: 1018px;
+}
+
+
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 992px) {
+  .airport-img {
+    width: 160px;
+  }
+
+  .airport-india {
+    top: 250px;
+    left: 40px;
+  }
+
+  .airport-japan {
+    top: 250px;
+    left: 640px;
+  }
+
+  .airport-france {
+    top: 250px;
+    left: 880px;
+  }
+}
+
 @media (max-width: 768px) {
-  .flight-animate-wrapper {
-    padding: 0.5rem;
-    overflow: hidden;            /* ✅ hides scrollbar */
+  .airport-img {
+    width: 120px;
   }
 
-  .flight-path-svg {
-    transform: scale(0.4);
-    transform-origin: top center;
+  .airport-india {
+    top: 240px;
+    left: 20px;
+  }
+
+  .airport-japan {
+    top: 240px;
+    left: 480px;
+  }
+
+  .airport-france {
+    top: 240px;
+    left: 670px;
   }
 }
 
-@media (max-width: 480px) {
-  .flight-path-svg {
-    transform: scale(0.3);
+@media (max-width: 576px) {
+  .airport-img {
+    width: 90px;
+  }
+
+  .airport-india {
+    top: 230px;
+    left: 10px;
+  }
+
+  .airport-japan {
+    top: 230px;
+    left: 300px;
+  }
+
+  .airport-france {
+    top: 230px;
+    left: 450px;
   }
 }
-
-
-  .flight-path-svg text {
-    font-size: 10px; /* smaller text */
-  }
-
-  .flight-path-svg image {
-    width: 20px !important;
-    height: 20px !important;
-  }
-
-  .flight-path-svg path {
-    stroke-width: 1.5; /* thinner path */
-    stroke-dasharray: 6; /* smaller dash */
-  }
 
 .navbar-heading h1 {
   font-size: 1.8rem;
