@@ -180,7 +180,7 @@
       
     </a>
 
-        <a href="explore-package-6.html" class="image-box">
+        <a href="explore-package-15.html" class="image-box">
       <img src="17.png" alt="Package 2">
       
     </a>
@@ -258,41 +258,48 @@
 <section class="destinations">
   <h2 class="section-title animate">Top Destinations</h2>
   <p class="section-subtitle animate">Explore the most visited places in India</p>
-<div class="flight-animate-wrapper">
-  <svg viewBox="0 0 1200 300" class="flight-path-svg" xmlns="http://www.w3.org/2000/svg">
-    <!-- Flight Paths -->
-    <path id="path-india-paris" d="M100,250 Q600,30 1100,250" fill="none" stroke="#FF6F00" stroke-width="3" stroke-dasharray="10" />
+  <div class="flight-animate-wrapper">
+    <!-- 🛫 Airport Images -->
+    <img src="Component 1.png" alt="India Airport" class="airport-img airport-india" />
+    <img src="Component 2.png" alt="Japan Airport" class="airport-img airport-japan" />
+    <img src="Component 2.png" alt="France Airport" class="airport-img airport-france" />
 
-    <path id="path-india-japan" d="M100,250 Q400,-10 900,250" fill="none" stroke="#0BC2D6" stroke-width="2" stroke-dasharray="8" />
+    <!-- ✈ SVG Flight Path -->
+    <svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" class="flight-path-svg">
 
-    <!-- Animated Plane -->
-    <g transform="translate(0, -40)">
-      <image xlink:href="plane_5532461.png" width="40" height="40">
-        <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-start-reverse">
+      <!-- Flight Paths -->
+      <path id="path-india-paris" d="M100,250 Q600,30 1100,250" fill="none" stroke="#FF6F00" stroke-width="3" stroke-dasharray="10" />
+      <path id="path-india-japan" d="M100,250 Q400,-10 900,250" fill="none" stroke="#0BC2D6" stroke-width="3" stroke-dasharray="8" />
+
+      <!-- Airplanes -->
+      <g>
+        <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
           <mpath href="#path-india-paris" />
         </animateMotion>
-      </image>
-    </g>
+        <image href="plane_5532461.png" xlink:href="plane_5532461.png" width="40" height="40" x="-20" y="-20" />
+      </g>
 
-    <!-- Animated Plane 2 -->
-    <g transform="translate(0, -40)">
-      <image xlink:href="plane_5532461.png" width="30" height="30">
-        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto-start-reverse">
+      <g>
+        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
           <mpath href="#path-india-japan" />
         </animateMotion>
-      </image>
-    </g>
+        <image href="plane_5532461.png" xlink:href="plane_5532461.png" width="30" height="30" x="-15" y="-15" />
+      </g>
 
-    <!-- Country Labels -->
-    <text x="100" y="270" fill="#222" font-size="16" font-weight="bold">India</text>
-    <text x="1100" y="270" fill="#444" font-size="16" font-weight="bold" text-anchor="end">France</text>
-    <text x="900" y="270" fill="#555" font-size="16" font-weight="bold" text-anchor="middle">Japan</text>
+      <!-- Labels -->
+      <text x="100" y="270" font-size="16" font-weight="bold">India</text>
+      <text x="1100" y="270" font-size="16" font-weight="bold" text-anchor="end">France</text>
+      <text x="900" y="270" font-size="16" font-weight="bold" text-anchor="middle">Japan</text>
 
-    <!-- Midpoint Labels -->
-    <text x="600" y="40" fill="#888" font-size="14" text-anchor="middle">✈ India → France</text>
-    <text x="500" y="20" fill="#999" font-size="14" text-anchor="middle">✈ India → Japan</text>
-  </svg>
-</div>
+      <text x="600" y="40" font-size="14" fill="#888" text-anchor="middle">✈ India → France</text>
+      <text x="500" y="20" font-size="14" fill="#999" text-anchor="middle">✈ India → Japan</text>
+
+    </svg>
+  </div>
+
+
+
+
 
     <div class="escape-slider-wrapper">
      
@@ -838,7 +845,7 @@
       <!-- Slide 1 -->
       <div class="swiper-slide">
         <div class="review-card">
-          <img src="https://i.pinimg.com/736x/79/43/be/7943be8d78be7e10f5c4f270b386755f.jpg" alt="Traveler">
+          <img src="https://i.pinimg.com/736x/54/fc/c6/54fcc6b2409ddbedf718e930bbff3116.jpg" alt="Traveler">
           <h3>Ankita Ak</h3>
           <p class="stars">⭐⭐⭐⭐⭐</p>
           <p>"Best amenities and services provided by them!"</p>
@@ -1030,13 +1037,17 @@
       </form>
     </div>
     
-    <div class="callback-illustration">
-      <img src="illustration.png" alt="Family Tour" />
-      <p>
-        Make your family tour exciting and memorable with<br />
-        <strong>Aransh Holidays</strong>
-      </p>
-    </div>
+<div class="callback-illustration">
+  <img src="callop.jpg" alt="Family Tour Image" />
+<p>
+  Make your family tour exciting and <br />
+  memorable with <br />
+  <strong style="color: #f88538; text-shadow: 0 0 6px #ce9e3e;">Aransh Holidays</strong>
+</p>
+
+</div>
+
+
   </div>
 </section>
 
@@ -1393,6 +1404,7 @@
     });
   });
 </script>
+
 
 
 
