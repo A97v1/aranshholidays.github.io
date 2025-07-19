@@ -3010,3 +3010,28 @@ body {
     object-fit: contain; /* ensure full image is shown */
   }
 }
+
+
+
+.footer-contact .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px; /* was probably too big before */
+}
+
+.footer-contact .social-icons a {
+  text-decoration: none;
+  color: #003B5B;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;       /* optional: equal sizing */
+  height: 40px;
+}
+
+.footer-contact .social-icons a:hover {
+  color: #0077b5;
+}
+
