@@ -1421,7 +1421,7 @@ align-items: center;
 /* ✅ Responsive Adjustments */
 @media (max-width: 992px) {
   .airport-img {
-    width: 160px;
+    display: none !important;
   }
 
   .airport-india {
@@ -1442,7 +1442,7 @@ align-items: center;
 
 @media (max-width: 768px) {
   .airport-img {
-    width: 120px;
+    display: none !important;
   }
 
   .airport-india {
@@ -1463,7 +1463,7 @@ align-items: center;
 
 @media (max-width: 576px) {
   .airport-img {
-    width: 90px;
+    display: none !important;
   }
 
   .airport-india {
@@ -2802,17 +2802,13 @@ body {
 
   /* ==== Callback Section ==== */
   .callback-section {
-    padding: 40px 10px;
+    padding: 40px 20px;
   }
 
   .callback-container {
-    max-width: 100vw !important;
-    width: 100vw !important;
-    padding: 15px;
-    margin: 0 auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
     flex-direction: column;
+    min-height: unset;
+    border-radius: 16px;
   }
 
   .callback-form {
@@ -2834,9 +2830,7 @@ body {
   }
 
   .callback-illustration {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+    min-height: 300px;
   }
 
   .callback-illustration p {
@@ -3108,12 +3102,3 @@ body {
 
 
 
-* {
-  box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-}
