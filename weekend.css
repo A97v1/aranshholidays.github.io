@@ -228,7 +228,7 @@ footer.footer-bottom {
   background: url('https://images.unsplash.com/photo-1533243216203-8c08406d4583?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center bottom;
   background-size: cover;
   position: relative;
-  padding: 200px 20px;
+  padding: 100px 20px;
   color: #fff;
   z-index: 1;
 }
@@ -257,26 +257,12 @@ footer.footer-bottom {
   padding: 20px;
 }
 
-/* 📱 Mobile Responsive Design */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start; /* align to left */
-    text-align: left;         /* text aligned left */
-    gap: 30px;
-    padding: 20px;
-  }
 
-  .footer-column {
-    width: 100%;
-    max-width: 100%;
-  }
-}
 
 
 .footer-column {
   flex: 1 1 250px;
-  min-width: 220px;
+  min-width: 200px;
 }
 
 .footer-column h3 {
@@ -358,17 +344,7 @@ footer.footer-bottom {
   font-size: 13px;
 }
 
-/* Optional: Fade in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 .footer-column,
 .footer-contact,
@@ -382,6 +358,74 @@ footer.footer-bottom {
 .footer-column:nth-child(2) { animation-delay: 0.4s; }
 .footer-column:nth-child(3) { animation-delay: 0.6s; }
 .footer-column:nth-child(4) { animation-delay: 0.8s; }
+
+/* 📱 Enhanced Mobile Responsive Design */
+@media (max-width: 768px) {
+  .footer-main {
+    padding: 60px 15px;
+    text-align: left;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-column p,
+  .footer-column ul li {
+    font-size: 13px;
+  }
+
+  .footer-contact {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .social-icons i {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .footer-offices {
+    margin-top: 30px;
+  }
+
+  .footer-offices h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer-offices p,
+  .footer-offices a {
+    font-size: 13px;
+  }
+
+  footer.footer-bottom {
+    padding: 12px 15px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
 
 
 .call-form {
