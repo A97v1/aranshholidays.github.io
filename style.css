@@ -366,18 +366,11 @@ footer.footer-bottom {
   }
 
   .footer-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 15px;
-    margin: 0 auto;
+    align-items: flex-start;
     gap: 30px;
-    overflow-x: hidden;
+    padding: 15px;
   }
-
 
   .footer-column {
     width: 100%;
@@ -432,6 +425,8 @@ footer.footer-bottom {
     text-align: center;
   }
 }
+
+
 
 
 .call-form {
@@ -2846,10 +2841,6 @@ body {
   }
 
 }
-
-
-
-
 
 
 .perfect-escape {
