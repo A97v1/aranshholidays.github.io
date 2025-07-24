@@ -2100,30 +2100,33 @@ body {
 }
 
 .callback-section {
-  padding: 80px 20px; /* was 50px, increase top/bottom padding */
+  padding: 80px 20px;
   background: #fefcf8;
   display: flex;
   justify-content: center;
-  font-family: 'Poppins', sans-serif;
+  align-items: center;
 }
 
+
 .callback-container {
-  max-width: 1200px;   /* was 1000px or 1100px */
-  min-height: 580px;
+  max-width: 1280px; /* Was probably 1000px or 1100px */
+  width: 100%;
+  min-height: 700px;
   background: #fff;
-  border-radius: 24px;
+  border-radius: 20px;
   display: flex;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  flex-wrap: wrap;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
 
 .callback-form {
   flex: 1;
-  padding: 40px;
-  background: linear-gradient(135deg, #ffffff, #fefae0);
+  padding: 60px;
+  background: linear-gradient(135deg, #e3e6e4, #f7ddce);
 }
+
 
 .callback-form h2 {
   font-size: 1.9rem;
