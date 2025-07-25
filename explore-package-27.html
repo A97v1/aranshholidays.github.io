@@ -233,7 +233,7 @@ A transparent overview of applicable fees.
 
   <div class="booking-row">
     <div class="label">Price</div>
-    <div class="value">₹52,000</div>
+    <div class="value">₹53,000</div>
   </div>
 
   <div class="booking-row">
@@ -250,7 +250,7 @@ A transparent overview of applicable fees.
 
   <div class="booking-row total-row">
     <div class="label">Total Amount</div>
-    <div class="value">₹<span id="totalAmount">₹52,000</span></div>
+    <div class="value">₹<span id="totalAmount">₹53,000</span></div>
   </div>
 
   <a href="login.html" class="booking-button">BOOK NOW</a>
@@ -259,7 +259,7 @@ A transparent overview of applicable fees.
 
 <script>
   function updateTotal() {
-    const basePrice = 52000; // Base price per person
+    const basePrice = 53000; // Base price per person
     let persons = document.getElementById("personInput").value;
     let total = basePrice * persons;
     document.getElementById("totalAmount").textContent = total;

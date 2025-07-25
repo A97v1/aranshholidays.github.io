@@ -168,7 +168,7 @@
   <h1>Send Enquiry</h1>
 
       <p class="description">
-     INR 12,449 <br>
+     INR 12,000 <br>
 INR 17,290 <br>
 SAVE <br>
 INR 4,841 <br>
@@ -199,7 +199,7 @@ Daily Breakfast <br>
 
   <div class="booking-row">
     <div class="label">Price</div>
-    <div class="value">₹2,60,000</div>
+    <div class="value">₹12,000</div>
   </div>
 
   <div class="booking-row">
@@ -216,7 +216,7 @@ Daily Breakfast <br>
 
   <div class="booking-row total-row">
     <div class="label">Total Amount</div>
-    <div class="value">₹<span id="totalAmount">₹2,60,000</span></div>
+    <div class="value">₹<span id="totalAmount">₹12,000</span></div>
   </div>
 
   <a href="login.html" class="booking-button">BOOK NOW</a>
@@ -225,7 +225,7 @@ Daily Breakfast <br>
 
 <script>
   function updateTotal() {
-    const basePrice = 260000; // Base price per person
+    const basePrice = 12000; // Base price per person
     let persons = document.getElementById("personInput").value;
     let total = basePrice * persons;
     document.getElementById("totalAmount").textContent = total;
