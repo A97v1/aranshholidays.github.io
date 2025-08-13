@@ -136,26 +136,28 @@
 
 
 
-
-<!-- Search Bar -->
-<div class="search-container">
+<div action="search.php" method="GET" class="search-container">
   <div class="tabs">
     <button class="tab left-tab active" onclick="switchTab(this)">Travel Packages</button>
     <button class="tab right-tab" onclick="switchTab(this)">Trip Planner</button>
   </div>
 
-  <div class="search-box left-connected"> <!-- We add "left-connected" class -->
+  <div class="search-box left-connected">
     <span class="icon-left">
       <i class="fi fi-bs-marker"></i>
     </span>
 
-    <input type="text" id="searchInput" placeholder="Pick the perfect Package for your Dream Destination" />
+    <input type="text" id="searchInput" placeholder="Pick the perfect Package for your Dream Destination" oninput="searchPackage()" />
 
-    <span class="icon-right">
+    <span class="icon-right" onclick="searchPackage()">
       <i class="fi fi-bs-search"></i>
     </span>
   </div>
 </div>
+
+<!-- Search results -->
+<div id="results" style="margin-top:15px; text-align:center;"></div>
+
 
 </section>
 
@@ -203,7 +205,7 @@
   <h2 class="package-heading">Discover Your Dream Journey</h2>
 
 <div class="card-container">
-  <a href="https://your-link.com/spiti" class="card" target="_blank">
+  <a href="explore-package-26.html" class="card" target="_blank">
     <img src="6p.png" alt="Spiti">
   </a>
 
@@ -298,9 +300,6 @@
   </div>
 
 
-
-
-
     <div class="escape-slider-wrapper">
      
 
@@ -308,6 +307,7 @@
         <div class="escape-card">
           <img src="https://images.unsplash.com/photo-1614591276564-7b3e69347a48?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kashmir" />
           <h3>Kashmir</h3>
+          <p></p>
         </div>
         <div class="escape-card">
           <img src="https://images.unsplash.com/photo-1617469165786-8007eda3caa7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bhutan" />
@@ -1339,70 +1339,147 @@
 </script>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const track = document.getElementById("escapeSlider");
-
-    let speed = 0.5; // adjust to make it slower/faster
-    let currentX = 0;
-
-    // Clone cards for seamless loop
-    const cloneCount = 5;
-    const cards = [...track.children];
-    for (let i = 0; i < cloneCount; i++) {
-      const clone = cards[i].cloneNode(true);
-      track.appendChild(clone);
-    }
-
-    function animateSlider() {
-      currentX -= speed;
-      track.style.transform = `translateX(${currentX}px)`;
-
-      // Reset when scrolled past half (original + clones)
-      if (Math.abs(currentX) >= track.scrollWidth / 2) {
-        currentX = 0;
-      }
-
-      requestAnimationFrame(animateSlider);
-    }
-
-    // Set up styles
-    track.style.display = "flex";
-    track.style.willChange = "transform";
-    track.style.transition = "none";
-
-    // Start animation
-    requestAnimationFrame(animateSlider);
-  });
-</script>
-
 
 
 <script>
-  const searchInput = document.getElementById("searchInput");
-  const packages = document.querySelectorAll(".package");
+// Your packages (replace with your actual package names, prices, and links)
+const packages = [
+  { name: "Kerala", 
+    link: [
+      { name: "Explore Kerala", url: "explore-package-15.html" },
+      { name: "Kerala Honeymoon", url: "honeymoon-package-1.html" },
+      { name: "Kerala Adventure", url: "honeymoon-package-4.html" }
+    ] 
+  },
+  { name: "Rajasthan", 
+    link: [
+      { name: "Royal Rajasthan Tour", url: "explore-package-6.html" },
+      { name: "Explore Rajasthan", url: "explore-package-7.html" },
+      { name: "Rajasthan Premium", url: "group-package-3.html" },
+      { name: "Rajasthan - Udaipur", url: "explore-package-5.html" }
+    ] 
+  },
+  { name: "Goa", 
+    link: [
+      { name: "Amazing Goa Trip", url: "explore-package.html" },
+      { name: "Superb Goa", url: "explore-package-8.html" },
+      { name: "Goa Chill Trip", url: "explore-package-13.html" }
+    ] 
+  },
+  { name: "Himachal Pradesh", 
+    link: [
+      { name: "Shimla - Queen of Hills", url: "explore-package-2.html" },
+      { name: "Himachal with Amritsar", url: "explore-package-3.html" },
+      { name: "Explore Ladakh via Manali", url: "explore-package-12.html" },
+      { name: "Special Hill of Queens", url: "explore-package-20.html" },
+      { name: "Manali Trip (by Volvo)", url: "explore-package-21.html" },
+      { name: "Himachal with Amritsar", url: "explore-package-22.html" },
+      { name: "Himachal Special - Delhi To Shimala", url: "explore-package-23.html" },
+      { name: "Himachal with Dharamshal Package", url: "explore-package-24.html" },
+      { name: "Exclusion Manali Form Delhi", url: "explore-package-25.html" },
+      { name: "Spiti Valley From Delhi", url: "explore-package-26.html" },
+      { name: "The Manali Escape", url: "weekend-package.html" },
+      { name: "Getaway to Manali", url: "weekend-package-1.html" },
+      { name: "Romantic Tour Delhi Manali", url: "honeymoon-package.html" },
+      { name: "Dalhousie Dharamshala Amritsar", url: "group-package.html" },
+      { name: "Dharamshala Dalhousie", url: "explore-package-11.html" }
+    ] 
+  },
+  { name: "Jammu & Kashmir", 
+    link: [
+      { name: "Blissful Jammu & Kashmir", url: "explore-package-1.html" },
+      { name: "Romantic Kashmir Valley", url: "honeymoon-package-2.html" }
+    ] 
+  },
+  { name: "Uttarakhand", 
+    link: [
+      { name: "Nainital Jim Corbett - Uttarakhand Tour", url: "explore-package-16.html" },
+      { name: "Rishikesh - Mussoorie - Nainital", url: "explore-package-17.html" },
+      { name: "Mussoorie Weekend Trip (By Car)", url: "explore-package-18.html" },
+      { name: "Delhi - Kausani - Nainital Vacation", url: "explore-package-19.html" },
+      { name: "Nainital Corbett", url: "explore-package-27.html" }
+    ] 
+  },
+  { name: "Ladakh", 
+    link: [
+      { name: "Incredible Ladakh Trip", url: "explore-package-2.html" },
+      { name: "Discover Ladakh Trip", url: "explore-package-14.html" },
+      { name: "Dharamshala Dalhousie", url: "explore-package-11.html" },
+      { name: "Leh ladakh kargil", url: "group-package-1.html" }
+    ] 
+  },
+    { name: "Singapore Tour", 
+    link: [
+      { name: "Singapore Tour", url: "foreign-package.html" }
+    ] 
+  },
+    { name: "Bali", 
+    link: [
+      { name: "Legian: Bliss Surfer Hotel", url: "foreign-package-1.html" }
+    ] 
+  },
+    { name: "Dubai", 
+    link: [
+      { name: "City Bur Dubai", url: "foreign-package-2.html" }
+    ] 
+  },
+    { name: "Thailand", 
+    link: [
+      { name: "Thailand Tour", url: "foreign-package-3.html" }
+    ] 
+  },
+    { name: "Japan", 
+    link: [
+      { name: "Tokyo Tour", url: "foreign-package-4.html" },
+      { name: "Tokyo & Japan Tour", url: "foreign-package-5.html" }
+    ] 
+  },
+];
 
-  searchInput.addEventListener("input", () => {
-    const searchText = searchInput.value.toLowerCase();
 
-    packages.forEach(pkg => {
-      const title = pkg.getAttribute("data-title").toLowerCase();
-      if (searchText === "") {
-        pkg.style.display = "block"; // Show all if search is empty
-      } else if (title.includes(searchText)) {
-        pkg.style.display = "block"; // Show matching
-      } else {
-        pkg.style.display = "none";  // Hide others
-      }
+function searchPackage() {
+  let query = document.getElementById("searchInput").value.toLowerCase();
+  let resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "";
+
+  if (query.trim() === "") {
+    resultsDiv.style.display = "none";
+    return;
+  }
+
+  let filtered = packages.filter(pkg => pkg.name.toLowerCase().includes(query));
+
+  if (filtered.length > 0) {
+    resultsDiv.style.display = "block";
+
+filtered.forEach(pkg => {
+  if (Array.isArray(pkg.link)) {
+    pkg.link.forEach(link => {
+      resultsDiv.innerHTML += `
+        <div class="package-box">
+          <h4>${link.name}</h4>
+          <a href="${link.url}" target="_blank">View Details</a>
+        </div>
+      `;
     });
-  });
+  } else {
+    resultsDiv.innerHTML += `
+      <div class="package-box">
+        <h4>${pkg.name}</h4>
+        <a href="${pkg.link}" target="_blank">View Details</a>
+      </div>
+    `;
+  }
+});
+
+  } else {
+    resultsDiv.style.display = "block";
+    resultsDiv.innerHTML = "<p style='color:red;'>No matching packages found.</p>";
+  }
+}
+
+
 </script>
-
-
-
-
-
-
 
 </body>
 </html>
