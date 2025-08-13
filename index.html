@@ -1339,11 +1339,68 @@
 </script>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.getElementById("escapeSlider");
+
+    let speed = 0.5; // adjust to make it slower/faster
+    let currentX = 0;
+
+    // Clone cards for seamless loop
+    const cloneCount = 5;
+    const cards = [...track.children];
+    for (let i = 0; i < cloneCount; i++) {
+      const clone = cards[i].cloneNode(true);
+      track.appendChild(clone);
+    }
+
+    function animateSlider() {
+      currentX -= speed;
+      track.style.transform = `translateX(${currentX}px)`;
+
+      // Reset when scrolled past half (original + clones)
+      if (Math.abs(currentX) >= track.scrollWidth / 2) {
+        currentX = 0;
+      }
+
+      requestAnimationFrame(animateSlider);
+    }
+
+    // Set up styles
+    track.style.display = "flex";
+    track.style.willChange = "transform";
+    track.style.transition = "none";
+
+    // Start animation
+    requestAnimationFrame(animateSlider);
+  });
+</script>
+
 
 
 <script>
+  const searchInput = document.getElementById("searchInput");
+  const packages = document.querySelectorAll(".package");
+
+  searchInput.addEventListener("input", () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    packages.forEach(pkg => {
+      const title = pkg.getAttribute("data-title").toLowerCase();
+      if (searchText === "") {
+        pkg.style.display = "block"; // Show all if search is empty
+      } else if (title.includes(searchText)) {
+        pkg.style.display = "block"; // Show matching
+      } else {
+        pkg.style.display = "none";  // Hide others
+      }
+    });
+  });
+</script>
+
+<script>
 // Your packages (replace with your actual package names, prices, and links)
-const packages = [
+const packageList = [
   { name: "Kerala", 
     link: [
       { name: "Explore Kerala", url: "explore-package-15.html" },
@@ -1447,7 +1504,7 @@ function searchPackage() {
     return;
   }
 
-  let filtered = packages.filter(pkg => pkg.name.toLowerCase().includes(query));
+  let filtered = packageList.filter(pkg => pkg.name.toLowerCase().includes(query));
 
   if (filtered.length > 0) {
     resultsDiv.style.display = "block";
